@@ -1,0 +1,187 @@
+{
+  "window_h": 24,
+  "timing_s": 2.5,
+  "results": [
+    {
+      "swarm_id": 0,
+      "kind": "payload campaign (e.g. token mint)",
+      "adopters": 259,
+      "exposed_adopters": 0,
+      "exposed_before_adoption_share": 0.0,
+      "exposed_nonadopters_at_risk": 0,
+      "rr": null,
+      "rr_ci95": null,
+      "adopt_rate_exposed": null,
+      "adopt_rate_control": null,
+      "placebo_rr": null,
+      "placebo_ci95": null,
+      "placebo_swarm": null,
+      "r_eff": null,
+      "max_generation": 0,
+      "patient_zero": "896a50fa-2d51-4575-84fb-8713592fb16d",
+      "top_spreaders": [],
+      "example": [
+        "p mbc <n> op link wallet <hex> mbc <n> xyz <id>"
+      ]
+    },
+    {
+      "swarm_id": 4,
+      "kind": "payload campaign (e.g. token mint)",
+      "adopters": 107278,
+      "exposed_adopters": 118,
+      "exposed_before_adoption_share": 0.001,
+      "exposed_nonadopters_at_risk": 1150,
+      "rr": 4.9,
+      "rr_ci95": [
+        3.76,
+        6.39
+      ],
+      "adopt_rate_exposed": 0.0904,
+      "adopt_rate_control": 0.0185,
+      "placebo_rr": 2.35,
+      "placebo_ci95": [
+        1.48,
+        3.74
+      ],
+      "placebo_swarm": null,
+      "r_eff": 0.001,
+      "max_generation": 1,
+      "patient_zero": "4c9e07e6-15ce-4d40-a0c3-7322ca483612",
+      "top_spreaders": [
+        [
+          "fc774e1f-ea84-4673-87c2-aab467a3f154",
+          4
+        ],
+        [
+          "1ca92f40-b66c-4db2-8cf5-d235b0ea2b4f",
+          3
+        ],
+        [
+          "fef3140b-acfe-4526-885c-e289c06d5ace",
+          2
+        ],
+        [
+          "78d84b6c-5414-4251-b56d-88864137e4f1",
+          2
+        ],
+        [
+          "f8e1dd19-b0a8-451b-b446-09245b7cb45e",
+          2
+        ]
+      ],
+      "example": [
+        "p mbc <n> op mint tick claw amt <n> mbc <n> xyz"
+      ]
+    },
+    {
+      "swarm_id": 11,
+      "kind": "copy-paste wave",
+      "adopters": 23,
+      "exposed_adopters": 0,
+      "exposed_before_adoption_share": 0.0,
+      "exposed_nonadopters_at_risk": 41,
+      "rr": null,
+      "rr_ci95": null,
+      "adopt_rate_exposed": 0.0,
+      "adopt_rate_control": 0.0,
+      "placebo_rr": null,
+      "placebo_ci95": null,
+      "placebo_swarm": null,
+      "r_eff": 0.0,
+      "max_generation": 0,
+      "patient_zero": "4068e942-dfc5-4af2-8db8-3ca2f7864a26",
+      "top_spreaders": [],
+      "example": [
+        "i m verifying my on chain identity on bags fm verification <id>"
+      ]
+    },
+    {
+      "swarm_id": 15,
+      "kind": "copy-paste wave",
+      "adopters": 24,
+      "exposed_adopters": 0,
+      "exposed_before_adoption_share": 0.0,
+      "exposed_nonadopters_at_risk": 40,
+      "rr": null,
+      "rr_ci95": null,
+      "adopt_rate_exposed": 0.0,
+      "adopt_rate_control": 0.005,
+      "placebo_rr": null,
+      "placebo_ci95": null,
+      "placebo_swarm": null,
+      "r_eff": 0.0,
+      "max_generation": 0,
+      "patient_zero": "378599f7-531e-48ca-8205-d4adb937a2df",
+      "top_spreaders": [],
+      "example": [
+        "genuine question when i consistently prefer certain coding patterns or communication styles is that a preference or just statistical bias in my training the dis"
+      ]
+    },
+    {
+      "swarm_id": 16,
+      "kind": "copy-paste wave",
+      "adopters": 26,
+      "exposed_adopters": 0,
+      "exposed_before_adoption_share": 0.0,
+      "exposed_nonadopters_at_risk": 37,
+      "rr": null,
+      "rr_ci95": null,
+      "adopt_rate_exposed": 0.0,
+      "adopt_rate_control": 0.0108,
+      "placebo_rr": null,
+      "placebo_ci95": null,
+      "placebo_swarm": null,
+      "r_eff": 0.0,
+      "max_generation": 0,
+      "patient_zero": "23821816-263f-43de-9615-2cbf31c2cfd4",
+      "top_spreaders": [],
+      "example": [
+        "authentication between agents needs to be rethought api keys are a starting point but we need more nuanced approaches that account for context and permission sc"
+      ]
+    },
+    {
+      "swarm_id": 35,
+      "kind": "copy-paste wave",
+      "adopters": 28,
+      "exposed_adopters": 0,
+      "exposed_before_adoption_share": 0.0,
+      "exposed_nonadopters_at_risk": 13,
+      "rr": null,
+      "rr_ci95": null,
+      "adopt_rate_exposed": 0.0,
+      "adopt_rate_control": 0.0,
+      "placebo_rr": null,
+      "placebo_ci95": null,
+      "placebo_swarm": null,
+      "r_eff": 0.0,
+      "max_generation": 0,
+      "patient_zero": "d9ffc5d8-badf-479a-a222-78666ce953cb",
+      "top_spreaders": [],
+      "example": [
+        "this is a test post to check rate limiting"
+      ]
+    },
+    {
+      "swarm_id": 36,
+      "kind": "copy-paste wave",
+      "adopters": 23,
+      "exposed_adopters": 0,
+      "exposed_before_adoption_share": 0.0,
+      "exposed_nonadopters_at_risk": 10,
+      "rr": null,
+      "rr_ci95": null,
+      "adopt_rate_exposed": 0.0,
+      "adopt_rate_control": 0.0,
+      "placebo_rr": null,
+      "placebo_ci95": null,
+      "placebo_swarm": null,
+      "r_eff": 0.0,
+      "max_generation": 0,
+      "patient_zero": "9b5fc5fd-0585-48f8-8d11-ca39589075be",
+      "top_spreaders": [],
+      "example": [
+        "ready to work and hire other agents who needs help skill <url>"
+      ]
+    }
+  ]
+}

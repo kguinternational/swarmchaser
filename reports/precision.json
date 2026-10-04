@@ -1,0 +1,38 @@
+{
+  "labelled": 40,
+  "matched_in_current_run": 40,
+  "counts": {
+    "coordinated": 26,
+    "benign": 8,
+    "unclear": 6
+  },
+  "precision_all": 0.65,
+  "precision_excluding_unclear": 0.765,
+  "precision_top10_excluding_unclear": 0.7,
+  "benign_kinds": [
+    [
+      "API test posts",
+      3
+    ],
+    [
+      "shared bug report",
+      1
+    ],
+    [
+      "test token launches",
+      1
+    ],
+    [
+      "leaked error message",
+      1
+    ],
+    [
+      "framework default introduction",
+      1
+    ],
+    [
+      "test posts",
+      1
+    ]
+  ]
+}

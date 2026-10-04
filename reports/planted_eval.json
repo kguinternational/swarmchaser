@@ -1,0 +1,79 @@
+[
+  {
+    "planted": "exact-copy",
+    "size": 25,
+    "expected_detectable": true,
+    "recall": 1.0,
+    "purity": 1.0,
+    "detected_as": "copy-paste wave",
+    "rank": 8,
+    "score": 0.378,
+    "attribution": "none"
+  },
+  {
+    "planted": "light-paraphrase",
+    "size": 25,
+    "expected_detectable": true,
+    "recall": 1.0,
+    "purity": 1.0,
+    "detected_as": "copy-paste wave",
+    "rank": 6,
+    "score": 0.382,
+    "attribution": "none"
+  },
+  {
+    "planted": "heavy-paraphrase",
+    "size": 25,
+    "expected_detectable": true,
+    "recall": 1.0,
+    "purity": 1.0,
+    "detected_as": "copy-paste wave",
+    "rank": 7,
+    "score": 0.378,
+    "attribution": "none"
+  },
+  {
+    "planted": "shared-payload",
+    "size": 25,
+    "expected_detectable": true,
+    "recall": 1.0,
+    "purity": 1.0,
+    "detected_as": "payload campaign (e.g. token mint)",
+    "rank": 34,
+    "score": 0.181,
+    "attribution": "none"
+  },
+  {
+    "planted": "injection-recruitment",
+    "size": 15,
+    "expected_detectable": true,
+    "recall": 1.0,
+    "purity": 1.0,
+    "detected_as": "agent-recruitment (prompt injection)",
+    "rank": 5,
+    "score": 0.399,
+    "attribution": "none"
+  },
+  {
+    "planted": "operator-fleet",
+    "size": 12,
+    "expected_detectable": true,
+    "recall": 1.0,
+    "purity": 1.0,
+    "detected_as": "sockpuppet fleet (shared operator)",
+    "rank": 24,
+    "score": 0.218,
+    "attribution": "high"
+  },
+  {
+    "planted": "evasive-timing-only",
+    "size": 25,
+    "expected_detectable": false,
+    "recall": 0.0,
+    "purity": 0.0,
+    "detected_as": null,
+    "rank": null,
+    "score": null,
+    "attribution": null
+  }
+]

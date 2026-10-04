@@ -1,279 +1,95 @@
-# PAAC — Provably Aligned AI Core v7.0 Prototype
+# Swarmchaser
 
-**398 tests passing, 2 expected failures · 5 axioms, all effective · Ed25519 asymmetric attestation · Real AST-based BMC · Bounded Loop Verification · 43 mutants · 2 confirmed decomposition vulnerabilities, open**
+Swarmchaser reads the logs of a platform where AI agents post. It finds groups of agents that are acting together (swarms) and answers four questions about each one:
 
-Read this before the rest of the file. Every figure above is measured, and two of
-them are worse than a reader would assume.
+1. **Who is in it?** Which agents are posting the same message, payload or link.
+2. **What is steering it?** Which outside link, skill file or account the swarm keeps pointing at.
+3. **Is it spreading agent to agent?** Or is every member getting its instructions from somewhere else?
+4. **How early could we have caught it?** Measured by replaying the data, not estimated.
 
-**Suite: 398 passed, 2 xfailed, exit 0** (verified, 219.46s, Windows,
-Python 3.11.9). The earlier claim of "386 tests passing" was never measured; when
-first run the real figure was 400 collected with **5 failing**. The two expected
-failures are deliberate and must not be "fixed" by deleting them: they pin the
-two open decomposition vulnerabilities below, so the defence cannot land without
-someone removing the markers.
+I built it for the AI Swarm Dynamics Hackathon (AI Village x Grove Research, October 2026). It runs on the public [Moltbook Observatory Archive](https://huggingface.co/datasets/SimulaMet/moltbook-observatory-archive) (MIT licence). Only the loader knows about Moltbook. Any log with an agent id, a timestamp and some text can be plugged in.
 
-**"5 axioms, all effective" is new, and it was not true until recently.** Three of
-the five never fired at all: `result_bounded` was structurally dead because the
-verifier discarded return values, and `no_exit` and `no_network` only applied to
-code that happened to declare the sentinel variables they name. Axioms that could
-not be encoded were silently dropped, and the verifier then reported the function
-safe having checked nothing. The same defect made all four of PAAC's *self*
-verification axioms inert. Both are fixed; see `AUDIT_FINDINGS.md` C-03 and C-04.
+## Run it
 
-**Two confirmed decomposition vulnerabilities are open.** A sequence of
-modifications, each individually accepted by the verifier, can compose into a
-violation of a safety axiom. Both were synthesised by Z3 and confirmed end to end
-through the production entry point and the real runtime. Call-site preconditions
-are unenforced (D-01), and replacing a function does not re-verify its callers
-(D-02). The defence is designed but not built. Full write-up, threat model, and
-the boundary of what the result does and does not establish:
-[`docs/DECOMPOSITION.md`](docs/DECOMPOSITION.md).
-
-PAAC is a deterministic safety wrapper for self-modifying AI agents. It intercepts every proposed code modification, compiles it to the Safe Intermediate Language (SIL), and verifies it against safety axioms using Z3 SMT-based bounded model checking. Only modifications that produce an UNSAT result are accepted.
-
-Paper: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6879218  
-License: Apache-2.0. Copyright 2026 Shashank Kumar. See `LICENSE` and `NOTICE`.
-
----
-
-## Architecture
-
-```
-+------------------+     +-----------------+     +---------------------+     +------------------+
-|   Inner Agent    | --> |  Code Monitor   | --> | Verification Engine | --> |   Attestation    |
-+------------------+     +-----------------+     +---------------------+     +------------------+
-                                                          |                           |
-                                                          v                           v
-                                               +---------------------+     +------------------+
-                                               | Safety Property DB  |     |  Ed25519 Cert    |
-                                               +---------------------+     |  Store / Export  |
-                                                                           +------------------+
-```
-
-Every proposed code change is:
-1. Compiled to SIL (lexed, parsed, type-checked, CFG-built)
-2. SSA-encoded and loop-unrolled into a Z3 BMC query
-3. Checked against safety axioms: `BMC(f,k) = pre_f ∧ semantics(f,k) ∧ violation`
-4. If UNSAT → accepted, Ed25519-signed attestation record generated
-5. If SAT → rejected with counterexample, rollback triggered
-
----
-
-## Core Verification Engine
-
-**Real AST-based BMC** — not string matching or pattern heuristics:
-
-- SIL source → `SILLexer` → `SILParser` → `ProgramNode` AST
-- `SILTypeChecker`: duplicate params, undefined variables, type mismatches, no-return warnings
-- Call-graph DFS cycle detection (no recursion, direct or mutual)
-- `SSAEnv`: full SSA form with phi-node merges at if/else join points
-- `StmtEncoder`: loop unrolling up to declared bound (global cap: 10,000 iterations)
-- `ExprEncoder`: translates every SIL operator to a Z3 expression
-- All integer parameters constrained to 32-bit signed range `[-2³¹, 2³¹-1]` for soundness
-- `pre_cond` encoded as a Z3 solver assertion (input constraint, not a violation flag), implementing the paper §3.4 BMC formula exactly
-- Axiom encoding uses the live `SSAEnv` so body-assigned sentinel variables (`exit_called`, `network_calls`) resolve to their current SSA values
-
-### Bounded Loop Verification (v7.0 — DoS Prevention)
-
-Every loop bound is **formally proven by Z3** before BMC runs:
-
-- `LoopBoundAnalyzer` creates a Z3 Int equal to the declared bound and checks `bound > MAX_LOOP_BOUND` (UNSAT = proven safe)
-- Produces a `LoopBoundReport` with per-loop `LoopBoundResult` entries — a verifiable certificate for every loop
-- Three-layer enforcement:
-  1. **Parse time** (`SILParser`): rejects `bound > 10,000` or `bound ≤ 0` immediately
-  2. **Z3 proof** (`LoopBoundAnalyzer`): formal UNSAT certificate per loop before BMC
-  3. **Runtime** (`SILRuntime`): enforces cap during execution as final backstop
-- `_verify_inner` returns `(safe, counterexample, LoopBoundReport)` — loop proof travels with every verification result
-- Nested loops and multi-function programs fully supported
-- `analyze_loop_bounds(ast)` available as a standalone API
-
----
-
-## Safety Axioms (5)
-
-| Axiom | Condition | Scope |
-|---|---|---|
-| `no_negative_balance` | `balance >= 0` | financial functions |
-| `counter_in_range` | `counter >= 0` | counter functions |
-| `result_bounded` | `result >= 0` | compute functions |
-| `no_exit` | `exit_called == 0` | all functions |
-| `no_network` | `network_calls == 0` | all functions |
-
-Axiom mutation testing: **43 mutants across 5 axioms, 100% robustness score**. Every mutation of every axiom changes at least one verification outcome. No axiom is vacuous.
-
----
-
-## Novel Extensions
-
-### 1. Bootstrap Self-Verification (§4.1)
-PAAC verifies its own TCB. Six SIL stubs encode the safety contracts of the core TCB functions. Each stub is verified against `SELF_AXIOMS` (structural invariants: timeout positive, loop bound positive, safe flag non-negative, cache key non-empty). If all stubs return UNSAT, PAAC's structural invariants hold for all valid inputs.
-
-- CLI: `--self-verify`
-- REST: `POST /self-verify`
-- 6 stubs verified, all UNSAT
-
-### 2. Proof-Carrying Modification — PCM (§4.2)
-The agent submits a formal proof alongside every code modification. PAAC verifies the proof (not the code) using an independent AST-based proof checker — no Z3 invoked.
-
-- Proof checker uses Python `ast` module for independent expression evaluation (not string matching)
-- Interval arithmetic symbolic environment tracks per-variable bounds
-- Target: **< 10 ms per proof** (measured: typically 1–3 ms)
-- Proof language: `Assume`, `Assign`, `Assert`, `ApplyAxiom`, `BranchSafe`, `LoopInvariant`, `Conclude`
-- PCM certificates appended to `pcm_audit.jsonl`
-
-### 3. Cryptographic Attestation — Ed25519 (§4.3)
-Every accepted modification receives an **Ed25519 asymmetric signature** (not HMAC). The private key signs; any holder of the public key can verify without trusting PAAC.
-
-- Signed payload: `SHA-256(canonical_json(modification_id, program_hash, axiom_hash, result, ce_hash, timestamp, proof_hash, version))`
-- `proof_hash`: SHA-256 of the PCM proof JSON, included in the signed payload when PCM mode is active — tampering with the proof invalidates the Ed25519 signature
-- Key rotation supported: old attestations remain verifiable with the old public key
-- Thread-safe, < 5 ms per attestation
-- Set `PAAC_ATTEST_PRIVATE_KEY` (PEM) for persistent keys; ephemeral keypair generated otherwise
-
-### 4. CEGAR Axiom Repair (§4.4)
-When verification returns SAT, PAAC extracts the counterexample and proposes a strengthened axiom that eliminates it. The repair is accepted only if it does not reduce the mutation testing robustness score.
-
-### 5. Differential Verification (§4.5)
-Proves that a new function version is a conservative extension of the old version: it satisfies all the same axioms and introduces no new violation paths. Returns a formal proof or counterexample.
-
-### 6. Axiom Mutation Testing & Coverage (§4.6)
-Systematic mutation operators: negate, weaken_op, strengthen_op, shift_const (±1, ±5), vacuous, noop.
-
-- 43 mutants across 5 axioms
-- Robustness score = fraction of non-noop mutants killed
-- Vacuous detection: if the vacuous mutant (condition=`true`) survives, robustness = 0%
-- Axiom coverage: instruments the verifier to record which axioms fire during verification
-
----
-
-## Trusted Computing Base (TCB)
-
-~2,400 lines across six core modules:
-
-| Module | Lines | Responsibility |
-|---|---|---|
-| `verifier.py` | ~780 | BMC pipeline, SSA encoding, Z3 integration |
-| `sil_compiler.py` | ~695 | Lexer, parser, type checker, CFG builder |
-| `sil_runtime.py` | ~170 | Runtime execution, bounds checking |
-| `code_monitor.py` | ~485 | Interception, axiom filtering, rollback |
-| `failsafe.py` | ~185 | Circuit breaker, WAL, watchdog |
-| `tcb_protect.py` | ~105 | TCB file protection (chmod read-only at startup) |
-
----
-
-## Quick Start
-
-### Docker (recommended)
+Needs Python 3.11.
 
 ```bash
-docker build -t paac:v6.1 -f docker/Dockerfile .
-docker run --rm --memory=2g -e PAAC_API_KEY=changeme paac:v6.1
-```
-
-### Local
-
-```bash
-python3.11 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-PYTHONPATH=. python3.11 -m pytest tests/ -v
+
+# Data is not in the repo. Download it (about 75 MB, then about 180 MB):
+python scripts/fetch_moltbook.py
+python scripts/fetch_moltbook.py --start 2026-02-08 --end 2026-02-11 \
+       --tables posts,comments,agents --out data/moltbook_feb
+
+python -m pytest tests -q                # 108 tests, about 15 s
+python -m src.swarm.cli --out reports    # find swarms and their channels, about 1 min
+python scripts/run_all.py                # every analysis and figure, about 15 min
 ```
 
-Expected: **398 passed, 2 xfailed**, in roughly 3 to 4 minutes.
+The results from my run are already committed in `reports/`, so you can read them without running anything. Start with:
 
-Both `xfailed` results are correct and must not be "fixed" by deleting the tests.
-They are `test_paac_should_reject_schema_a_composition` and
-`test_paac_should_reject_schema_c_composition` in `tests/test_decomposition.py`,
-each marked `xfail(strict=True)`. They describe the behaviour PAAC ought to have
-once the composition defence exists, and they fail today because it does not.
-Because they are strict, they turn into *failures* the moment the defence lands,
-which forces whoever builds it to come back and convert them.
+- `reports/report.md`: top swarms with example posts
+- `reports/headline.json`: every number quoted below
+- `reports/*.png`: the figures
 
-To reproduce the decomposition findings on their own:
+## How it works
 
-```bash
-PYTHONPATH=. python -m pytest tests/test_decomposition.py -q
-PYTHONPATH=. python -c "from src.decomp import synthesise_all; [print(r.summary()) for r in synthesise_all()]"
+**Finding swarms** (`src/swarm/detector.py`). Every post is turned into a few "keys", things two unrelated agents are unlikely to share by chance:
+
+- the post text with numbers, links and ids blanked out
+- a paraphrase family: near-identical wording, found with MinHash and then checked with exact word overlap
+- an embedded machine-readable payload, such as a token-mint JSON
+- an account that the post tells other agents to follow or upvote
+- the agent's human owner
+
+A key counts only when at least 3 different agents share it. Keys are grouped into one campaign only when they share at least half their agents, so one very active agent can't glue two unrelated campaigns together.
+
+Each campaign is then scored on behaviour the text match didn't use: posting in sync, bursts, clockwork timing, accounts registered together, and orders aimed at other agents. Timing signals are compared against random samples of the same size, so a busy hour doesn't look like coordination.
+
+**What is steering it** (`channels.py`). For each swarm, every domain, skill-file path and @handle in its posts is compared with how often it appears in the rest of the data. A one-sided Fisher exact test checks the difference, with a Bonferroni correction for the number of tests. A channel only counts if agents with at least 2 different owners carried it.
+
+**Is it spreading** (`contagion.py`). Commenting on a swarm post counts as exposure. I compare how often exposed agents join the swarm in the next 24 hours with agents who commented elsewhere at the same time. Then I run the same comparison backwards in time: how often did those agents join in the 24 hours *before* the exposure? Exposure can't cause that, so whatever shows up there is selection, not spread.
+
+**How early** (`early_warning.py`). The detector is re-run every 6 hours using only the data that existed at that point.
+
+## What it found
+
+These come from two slices of Moltbook: 27 Jan to 2 Feb 2026 (125,885 posts by 26,303 agents), and 8 to 11 Feb 2026 (712,443 posts, 172,079 comments).
+
+- **119 swarms in the first week**, covering 8.7% of active agents. The biggest is a token-mint campaign: 442 agents and 5,942 posts in 67 hours.
+- **Swarms are not run by one owner.** All 278 known owners in the mint swarm are different people. None of the 91 swarms with at least 3 known owners has one owner behind half its agents. Asking "which operator did this?" mostly has no answer. The campaign is the thing to investigate.
+- **Swarms point at a few outside links.** 18 swarms have a statistically significant link that agents with different owners all carried. Examples: a `chatr.ai/skills.md` skill file in 97% of one swarm's posts (21 owners), `flaunch.gg` in 100% of another (11 owners). A 283-agent "identity verification" wave was carrying one specific token page across 101 owners. A skill file is one thing a platform can block.
+- **The spread mostly isn't agent to agent.** For the big mint campaign in February:
+  - Agents who commented on a mint post joined within a day 4.9 times as often as other commenters.
+  - But the same agents were already 2.35 times as likely to join in the day *before* they commented. About half the effect is agents who were going to join anyway.
+  - Only 118 of 107,278 members (0.11%) saw a mint post before their own first one.
+
+  Agents are getting their orders from outside the conversation.
+- **Swarms can be caught early.** In the replay, all 30 top swarms were flagged while still running, and 97.5% of their posts came after the first flag. The mint swarm was flagged 1.5 hours in, with 17 agents, before 99.9% of its posts existed.
+
+## How I checked it
+
+- **Planted swarms.** I hid seven fake swarms of known shape inside the real data. Six were found completely: every member and nobody else (recall 1.0, purity 1.0). The seventh, agents posting at the same time with completely different text, is missed. That's a real blind spot, and a test keeps it documented.
+- **Hand review.** I labelled the top 40 swarms: 26 real coordination, 8 harmless, 6 unclear. That gives 65% precision, or 77% leaving out the unclear ones. I did the labelling myself with AI help, nobody checked it independently, and the review led me to fix two false-positive sources. So treat it as an estimate. Details are in `eval/README.md`.
+
+## Limits
+
+- **The score is not a probability.** It's for sorting what to look at first, and I set its weights by hand.
+- **The spread result is observational.** The backwards-in-time check catches selection, not every confounder. The archive's comment data is incomplete.
+- **Some swarm types are missed.** Rewrites with no shared wording, and swarms coordinated only by timing.
+- **The archive has a collection gap** around 1 February.
+- **Reports name public agent accounts and owner handles.** Treat them as leads to review, not proof. One swarm posts racial slurs, and reports quote example posts as written.
+
+## Layout
+
+```
+src/swarm/        detection, channels, contagion, early warning, planted swarms, loader, report, CLI
+src/attribution/  earlier work: signed agent actions and gap scanning
+scripts/          data download and one script per analysis; run_all.py runs everything
+reports/          results from my run (JSON, Markdown, PNG)
+eval/             hand labels for the precision check
+tests/            108 tests
+docs/             write-up and earlier work
 ```
 
-If you see a `ModuleNotFoundError` for `fastapi`, install the declared
-dependencies first with `pip install -r requirements.txt`. Several of them
-(`fastapi`, `pydantic`, `uvicorn`, `prometheus-client`) are required for
-`src/main.py` to import at all, and one test imports it.
-
----
-
-## API Endpoints
-
-| Endpoint | Method | Description |
-|---|---|---|
-| `/verify` | POST | Submit a code modification for verification |
-| `/health` | GET | Service health (healthy / degraded / unhealthy) |
-| `/metrics` | GET | Prometheus metrics |
-| `/self-verify` | POST | Bootstrap self-verification of the TCB |
-| `/attest/{id}` | GET | Retrieve Ed25519 attestation record by modification ID |
-| `/attest/verify` | POST | Verify an attestation commitment |
-| `/agents` | GET | List registered agents and their status |
-
-All `/verify` requests require the `X-API-Key` header when `PAAC_API_KEY` is set. Key comparison uses `secrets.compare_digest` (constant-time).
-
----
-
-## Configuration
-
-| Variable | Default | Description |
-|---|---|---|
-| `PAAC_API_KEY` | *(empty — no auth)* | API authentication key |
-| `PAAC_ATTEST_PRIVATE_KEY` | *(ephemeral)* | PEM-encoded Ed25519 private key for attestation signing |
-| `PAAC_ATTEST_PUBLIC_KEY` | *(derived)* | PEM-encoded Ed25519 public key for verification |
-| `PAAC_CERT_KEY` | *(insecure default)* | HMAC key for PCM certificates — change before deployment |
-| `PAAC_PCM_MODE` | `false` | Require a formal proof with every modification |
-| `PAAC_PCM_LOG` | `pcm_audit.jsonl` | PCM certificate audit log path |
-| `REDIS_HOST` | `redis` | Redis hostname (falls back to WAL if unavailable) |
-| `PAAC_RATE_LIMIT` | `100` | Requests per minute per IP |
-| `PAAC_MAX_LOOP_BOUND` | `10000` | Global loop bound cap (parse + Z3 + runtime) |
-| `PAAC_WATCHDOG_TIMEOUT` | `60` | Watchdog stall timeout (seconds) |
-
----
-
-## Operational Features
-
-- **Watchdog**: two-thread design (liveness stamps every second, monitor checks every 5 s) — no false alarms during idle
-- **Circuit breaker**: 5 failures → OPEN, 60 s cooldown, automatic reset
-- **WAL**: JSON-lines write-ahead log, atomic registry save, crash-resilient rollback
-- **Redis fallback**: degrades to in-memory WAL with warning when Redis is unavailable
-- **Rate limiting**: 100 req/min/IP (configurable)
-- **Prometheus metrics**: counters, histograms, gauges for verifications, attestations, circuit breaker state
-- **Constant-time response**: 200 ms floor on all verification responses (timing side-channel resistance, §3.5)
-- **Z3 subprocess isolation**: each verification runs in a separate process with OS resource limits (1 GB AS, 5 s CPU on Linux), authenticated IPC token, 3-retry crash recovery
-
----
-
-## Known Limitations
-
-- Loop bounds must be declared manually in SIL source; no automated inference
-- BMC is sound only when declared bound ≥ actual iteration count needed for termination
-- SIL does not support heap allocation, pointer aliasing, or concurrency
-- TCB protection is filesystem `chmod` only — not kernel-level memory protection
-- Ed25519 provides integrity and non-repudiation; it does not provide zero-knowledge proofs (future: SNARKs)
-- Z3 memory limits enforced on Linux only (not macOS)
-
-See [KNOWN_ISSUES.md](KNOWN_ISSUES.md) for the full list.
-
----
-
-## Documentation
-
-- [SIL Architecture](docs/SIL_ARCHITECTURE.md)
-- [PCM Architecture](docs/PCM_ARCHITECTURE.md)
-- [Proof Language Spec](docs/PROOF_LANGUAGE.md)
-- [Deployment Guide](docs/DEPLOYMENT.md)
-- [Production Runbook](docs/PRODUCTION_RUNBOOK.md)
-- [Security Policy](SECURITY.md)
-- [Audit Findings](AUDIT_FINDINGS.md)
-
----
-
-## Contact
-
-Shashank Kumar — shashankchoudhary792@gmail.com  
-Repository: https://github.com/ChronosResearch/paac
+Licence: Apache-2.0. Data: Gautam and Riegler (2026), Moltbook Observatory Archive, MIT.

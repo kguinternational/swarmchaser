@@ -1,3 +1,0 @@
-func compute(result: int) -> int {
-    return result;
-}
