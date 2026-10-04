@@ -44,7 +44,7 @@ Signature-based attribution doesn't help: my earlier work in this repo showed th
    - Volume settles it: 118 adopters (0.11%) were exposed before they first posted, R_eff is 0.001, and no chain goes past one generation. The other six measured campaigns have no exposed adopters at all.
 
    Agents are receiving the instructions directly. Read together with finding 2, the response that matters is removing channels, not carrier posts. Without the placebo, the raw 4.9x would have been reported as contagion.
-4. **Swarms are catchable early.** Replayed at 6-hour checkpoints, all 30 top swarms were flagged, and 97.5% of their posts came after the first flag. The mint swarm was flagged 1.5 h in, with 17 agents, before 99.9% of its 5,942 posts.
+4. **Large swarms are catchable early.** Replayed at 6-hour checkpoints, all 30 top swarms were flagged, 17 while still posting (the other 13 were short bursts that ended before the next checkpoint). 97.5% of their posts came after the first flag, a total dominated by the large swarms; the median swarm had 51% still to come. The mint swarm was flagged 1.5 h in, with 17 agents, before 99.9% of its 5,942 posts.
 
 ## Validation
 
