@@ -20,6 +20,7 @@ dist/
 # Downloaded data: fetch with scripts/fetch_moltbook.py (MIT-licensed, not ours to redistribute in bulk)
 data/moltbook/
 data/moltbook_feb/
+data/swarmtraces/
 
 # Run logs and scratch output
 logs/
