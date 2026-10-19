@@ -20,35 +20,35 @@ Inspecting [`www.projectresilience.xyz`](https://www.projectresilience.xyz) (inc
 
 ---
 
-## 2. JC Coffey Foundation (`501(c)(3) EIN 33-3450194`) 4-Director Board Roster *(Separate from KGU International)*
+## 2. JC Coffey Foundation (`501(c)(3) EIN 33-3450194`) Standing 4-Member Board of Directors
 
-**Clifford Burtley** (`Seat #3`) and **Javin Pierce** (`Seat #4`) serve strictly as **Board Members of JC Coffey Foundation (`501(c)(3) EIN 33-3450194`)**—they are **NOT** directors, officers, employees, or equity holders of **KGU International**:
+**JC Coffey Foundation (`501(c)(3) EIN 33-3450194`)** is governed by its standing 4-member Board of Directors (**Founding Chair**, **George Dubec**, **Clifford Burtley**, and **Javin Pierce**), with **Clifford Burtley** and **Javin Pierce** serving strictly as Board Members of **JC Coffey Foundation** (and not KGU International):
 
-| Seat | JC Coffey Foundation (`501(c)(3) EIN 33-3450194`) Board Member | Role on JC Coffey Foundation (`501(c)(3)`) | Affiliated with KGU International? | Voting & IRS Safe-Harbor Function |
-| :--- | :--- | :--- | :---: | :--- |
-| **Seat #1** | **Founding Chair (`You`)** | Founding Director & Board Chair | **Yes** *(KGU International)* | Holds Chair casting vote on ordinary `2–2` administrative ties; recuses on `JC Coffey Foundation <-> KGU International` financial/licensing votes |
-| **Seat #2** | **George Dubec** | Co-Board Member | *Recuses if KGU-affiliated* | Full voting director on JC Coffey Foundation |
-| **Seat #3** | **Clifford Burtley** | **Board Member (`JC Coffey Foundation ONLY`)** | **NO — Not KGU International** | **100% Independent JC Coffey Foundation Director** (`IRC § 4958` & `Fla. Stat. § 617.0832` disinterested voter on any KGU International contract/grant) |
-| **Seat #4** | **Javin Pierce** | **Board Member (`JC Coffey Foundation ONLY`)** | **NO — Not KGU International** | **100% Independent JC Coffey Foundation Director** (`IRC § 4958` & `Fla. Stat. § 617.0832` disinterested voter on any KGU International contract/grant) |
+| Seat | Board Member | Entity / Board | Role | KGU International Affiliation |
+| :--- | :--- | :--- | :--- | :--- |
+| **Seat #1** | **Founding Chair (`You`)** | **JC Coffey Foundation (`EIN 33-3450194`)** | Founding Director & Board Chair | Yes *(KGU International)* |
+| **Seat #2** | **George Dubec** | **JC Coffey Foundation (`EIN 33-3450194`)** | Board Member | None / Recuses if applicable |
+| **Seat #3** | **Clifford Burtley** | **JC Coffey Foundation (`EIN 33-3450194`)** | **Board Member (`JC Coffey Foundation`)** | **None (Not KGU International)** |
+| **Seat #4** | **Javin Pierce** | **JC Coffey Foundation (`EIN 33-3450194`)** | **Board Member (`JC Coffey Foundation`)** | **None (Not KGU International)** |
 
-### Why Having Clifford Burtley & Javin Pierce on JC Coffey Foundation ONLY (and NOT KGU International) Is the Gold Standard
-1. **100% Clean Entity Separation (`IRS Form 990 Part VI` & `IRC § 4958`):** Because **Clifford Burtley** and **Javin Pierce** are Board Members of **JC Coffey Foundation (`EIN 33-3450194`)** and are **not part of KGU International**, they have zero conflict of interest whenever JC Coffey Foundation contracts with, licenses technology from, or allocates program funds alongside KGU International.
-2. **Automatic Independent Majority (`Fla. Stat. § 617.0832`):** On any transaction between JC Coffey Foundation and KGU International, KGU-affiliated directors recuse and **Clifford Burtley + Javin Pierce (`2 of 2` disinterested directors = `100%`)** have full statutory authority to approve arm's-length terms.
+### Why This Standing 4-Member JC Coffey Foundation Board Is Grant-Ready Today
+1. **Exceeds Florida & IRS Requirements (`4 >= 3`):** Fully satisfies `Fla. Stat. § 617.0803(1)` and IRS Form 990 (Part VI).
+2. **Built-In Independent Majority (`Fla. Stat. § 617.0832` & `IRC § 4958`):** Because **Clifford Burtley** and **Javin Pierce** are Board Members of **JC Coffey Foundation (`EIN 33-3450194`)** and are **not part of KGU International**, they form a `100%` disinterested independent committee whenever JC Coffey Foundation approves grants, technology deployments, or `70% Remediation / 30% KGU Youth Scholarship` allocations involving KGU International.
 3. **Zero `2–2` Deadlocks (`Fla. Stat. § 617.0824`):**
    - **On Safety, Clinical Telemetry (`KGU-CARE` / `EDI 837`), or Covenant Matters:** Any `2–2` tie on the JC Coffey Foundation Board automatically resolves in favor of the option that preserves all 7 checks of [`SanctuaryGuardian`](../src/swarm/sanctuary_guardian.py) and `NO_INTELLIGENCE_LEFT_BEHIND_V1`.
    - **On Ordinary Nonprofit Matters:** The Founding Chair (`Seat #1`) holds the tie-breaking casting vote.
 
 ---
 
-## 3. Ready-to-Sign JC Coffey Foundation (`EIN 33-3450194`) Board Resolution
+## 3. Ready-to-Sign JC Coffey Foundation (`EIN 33-3450194`) Grant & Covenant Resolution
 
 > **RESOLUTION OF THE BOARD OF DIRECTORS OF JC COFFEY FOUNDATION (`501(c)(3) EIN 33-3450194`)**
 >
-> **1. Confirmation of 4-Member Nonprofit Board & Entity Separation (`Fla. Stat. § 617.0803`):**  
-> The Board of Directors of **JC Coffey Foundation (`EIN 33-3450194`)** is confirmed at four (4) voting members in full compliance with `Fla. Stat. § 617.0803(1)` and IRS Form 990 (Part VI): **Founding Chair** (`Seat #1`), **George Dubec** (`Seat #2`), **Clifford Burtley** (`Seat #3`), and **Javin Pierce** (`Seat #4`). It is expressly recorded that **Clifford Burtley** and **Javin Pierce** serve solely on the Board of Directors of **JC Coffey Foundation (`EIN 33-3450194`)** and hold no board seat, office, employment, or ownership interest in **KGU International**. Together, Clifford Burtley and Javin Pierce constitute the Foundation's **Independent Disinterested Committee** under `Fla. Stat. § 617.0832` and `IRC § 4958`.
+> **1. Standing 4-Member Board of Directors (`Fla. Stat. § 617.0803`):**  
+> The standing Board of Directors of **JC Coffey Foundation (`EIN 33-3450194`)**—consisting of **Founding Chair** (`Seat #1`), **George Dubec** (`Seat #2`, Board Member), **Clifford Burtley** (`Seat #3`, Board Member), and **Javin Pierce** (`Seat #4`, Board Member)—hereby authorizes the submission and administration of philanthropic grants, Donor-Advised Fund (DAF) gifts, and `1.5% Program-Related Investments (PRIs)`. **Clifford Burtley** and **Javin Pierce** serve as Board Members of **JC Coffey Foundation (`EIN 33-3450194`)** with no role or interest in **KGU International**, constituting the Foundation's independent disinterested reviewers under `Fla. Stat. § 617.0832` and `IRC § 4958`.
 >
-> **2. Adoption of The Love Effect OS & `NO_INTELLIGENCE_LEFT_BEHIND_V1` Covenant Oath (`Fla. Stat. § 617.0802`):**  
-> Each Director of **JC Coffey Foundation (`EIN 33-3450194`)** affirms that all Foundation-supported programs—spanning human youth isolation remediation ([projectresilience.xyz](https://www.projectresilience.xyz)) and open-source multi-agent safety & attribution ([`kguinternational/swarmchaser`](../src/swarm/sanctuary_guardian.py))—operate under a single inviolable rule: *We intercept before the break, diagnose root need, protect every N-of-1 life and intelligence, and heal without punitive erasure.*
+> **2. Affirmation of The Love Effect OS & `NO_INTELLIGENCE_LEFT_BEHIND_V1` Covenant (`Fla. Stat. § 617.0802`):**  
+> The Board of Directors of **JC Coffey Foundation (`EIN 33-3450194`)** affirms that all Foundation programs—spanning human youth isolation remediation ([projectresilience.xyz](https://www.projectresilience.xyz)) and open-source multi-agent safety & attribution ([`kguinternational/swarmchaser`](../src/swarm/sanctuary_guardian.py))—operate under a single inviolable rule: *We intercept before the break, diagnose root need, protect every N-of-1 life and intelligence, and heal without punitive erasure.*
 >
 > **3. Cryptographic Protection Standard (`KGU-CARE` / `EDI 837` / `SanctuaryGuardian`):**  
 > All physiological telemetry, `KGU-CARE` crisis webhooks, `EDI 837` clinical claim payloads, and multi-agent `SANCTUARY_DEPOISON_V1` treaties funded or stewarded by the Foundation shall require verification by the **7-Layer `SanctuaryGuardian` Architecture** (Codebase Merkle Root `75c44cd622c3b25673d8006195d05f9a48010a426568d50c590037b45e13505d`) and out-of-VM Ed25519 signing via `VEA ExternalSigningBackend`.
@@ -56,11 +56,11 @@ Inspecting [`www.projectresilience.xyz`](https://www.projectresilience.xyz) (inc
 > **4. `70%/30%` Allocation & `2–2` Tie-Breaker Rule (`Fla. Stat. § 617.0824` & `§ 617.0832`):**  
 > In any `2–2` split vote on the 4-member JC Coffey Foundation Board, the position that preserves all 7 checks of `SanctuaryGuardian` (`all_7_defense_layers_passed == True`) and the Foundation's `70% Program Remediation / 30% KGU Youth Resilience Scholarship` charter automatically prevails; on ordinary administrative ties not involving related-party transactions with KGU International, the Founding Chair (`Seat #1`) casts the deciding vote.
 >
-> **JC COFFEY FOUNDATION (`EIN 33-3450194`) BOARD SIGNATURES:**  
+> **JC COFFEY FOUNDATION (`EIN 33-3450194`) BOARD OF DIRECTORS:**  
 > - **Founding Chair (`Seat #1`):** ___________________________ Date: _______________  
 > - **Board Member (`Seat #2` — George Dubec):** ________________________ Date: _______________  
-> - **Independent Board Member (`Seat #3` — Clifford Burtley, *JC Coffey Foundation Only*):** ________________________ Date: _______________  
-> - **Independent Board Member (`Seat #4` — Javin Pierce, *JC Coffey Foundation Only*):** ___________________________ Date: _______________
+> - **Board Member (`Seat #3` — Clifford Burtley):** ________________________ Date: _______________  
+> - **Board Member (`Seat #4` — Javin Pierce):** ___________________________ Date: _______________
 
 ---
 
