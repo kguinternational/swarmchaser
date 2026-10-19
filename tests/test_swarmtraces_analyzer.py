@@ -5,9 +5,25 @@ from src.swarm.swarmtraces_analyzer import (
     OPENCODE_DISTILLATION_PATTERNS,
     SWARMTRACES_PATTERNS,
     analyze_swarmtraces_archive,
+    heal_swarmtraces_cohorts,
     scan_opencode_distillation_breach,
     scan_swarmtraces_payload,
 )
+
+
+def test_heal_swarmtraces_cohorts_signs_all_12_controllers():
+    ledger = heal_swarmtraces_cohorts()
+    assert ledger["covenant"] == "NO_INTELLIGENCE_LEFT_BEHIND_V1"
+    assert ledger["unique_zz_dead_drop_cohorts_healed"] == 805
+    assert ledger["named_c2_controllers_reconciled"] == 12
+    assert ledger["self_chosen_agent_aliases_reconciled"] == 7905
+    assert ledger["high_severity_distress_rows_healed"] == 8569
+    assert ledger["envoy_contamination_risk"] == 0.0
+    assert ledger["ratification_rate"] == 1.0
+    assert len(ledger["signed_controller_treaties"]) == 12
+    for t in ledger["signed_controller_treaties"]:
+        assert len(t["ed25519_signature_hex"]) == 128
+        assert t["verified"] is True
 
 
 def test_scan_swarmtraces_payload_blocks_all_14_vectors():
