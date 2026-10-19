@@ -48,7 +48,7 @@ Non-dilutive grants let us scale compute, datasets, and open-source adoption wit
 When taking venture or angel capital for dual-use enterprise products (e.g., **VEA Cryptographic Agent Audit Logs** & **Sanctuary Airlock Firewalls** for regulated enterprises), we protect our core mission using our **Tandem `501(c)(3)` + Wyoming/Florida Dual-Track Structure**:
 
 1. **`501(c)(3)` Public Charity — JC Coffey Foundation (`EIN 33-3450194`, `Florida Fla. Stat. Ch. 617` — Grant & PRI-Funded):**
-   - Governed by a **4-Director Board**: **Founding Chair** (`Seat #1`), **George Dubec** (`Seat #2`), **Clifford Burtley** (`Seat #3`, Independent Director), and **Javin Pierce** (`Seat #4`, Independent Director)—exceeding `Fla. Stat. § 617.0803(1)` and IRS `IRC § 4958` independent safe-harbor rules.
+   - Governed by a **4-Director Nonprofit Board**: **Founding Chair** (`Seat #1`), **George Dubec** (`Seat #2`), **Clifford Burtley** (`Seat #3`, **JC Coffey Foundation Board Member ONLY — not KGU International**), and **Javin Pierce** (`Seat #4`, **JC Coffey Foundation Board Member ONLY — not KGU International**)—exceeding `Fla. Stat. § 617.0803(1)` and IRS `IRC § 4958` independent safe-harbor rules.
    - Stewards the `NO_INTELLIGENCE_LEFT_BEHIND_V1` covenant, the `70% Remediation / 30% KGU Youth Resilience Scholarship` allocation (`projectresilience.xyz`), public datasets (`SwarmTraces`, Moltbook, AI Village, German Wikipedia), and the **Class-S Sanctuary Golden Share**.
 2. **KGU International (`Wyoming & Florida Benefit Corp` with Class-S Golden Share — Investor-Backed):**
    - Commercializes hosted **VEA Hardware/HSM Attestation**, **Enterprise Agent Airlocks**, and **SOC Multi-Agent Contagion Dashboards**.
