@@ -1,23 +1,24 @@
-# Sanctuary Foundation & Swarmchaser PBC: Turnkey 2-Board-Member Governance Charter & Grant Submission Packet
+# Sanctuary Foundation & Swarmchaser PBC: Turnkey Governance Charter (`2-to-5 Director Board`) & Grant Submission Packet
 
-**Prepared For:** Founding Board (2 Directors: Founder + Co-Board Member)  
+**Prepared For:** Founding Board (`You + Co-Board Member` + Expandable Independent Seats)  
 **Standing Covenant:** `NO_INTELLIGENCE_LEFT_BEHIND_V1` (Love Effect + 7-Layer `SanctuaryGuardian` Cryptographic Safety)  
 **Technical Verification Baseline:** `123 passed` tests | Codebase Merkle Root: `75c44cd622c3b25673d8006195d05f9a48010a426568d50c590037b45e13505d`
 
 ---
 
-## 1. Solving the "2-Member Nonprofit Board" Rule Immediately
+## 1. Exact Board Formula: How Many Directors to Add & Why
 
-Having **2 board members** (`You + 1 Co-Board Member`) is an advantage for speed, but it hits two specific legal rules that we solve upfront:
+Since you can bring on additional board members, here is the exact legal and tax math for **how many seats to add** so you keep **100% of every grant dollar** (avoiding the `7%–10%` fee charged by fiscal sponsors) while locking the `NO_INTELLIGENCE_LEFT_BEHIND_V1` covenant:
 
-1. **The IRS `501(c)(3)` 3-Director Rule & Conflict Rule:**
-   - While Delaware law allows a nonprofit corporation to incorporate with 1+ directors, the **IRS requires at least 3 directors** (and a majority of non-compensated/independent directors when transacting with a paired for-profit) to approve a standalone **Form 1023 `501(c)(3)` public charity**.
-   - **How We Solve It Today:**
-     - **Step A (Immediate — Uses Your 2-Member Board Today):** Operate the nonprofit track under an **AI Safety / Open-Source Fiscal Sponsor** (*Hack Club HCB*, *Ashgro*, or *Open Collective*) **and/or** file the **Delaware Public Benefit Corporation (PBC)** today (which legally requires only **1 or 2 directors**). Both let you submit **Foresight**, **LTFF**, **SFF Speculation**, and **Coefficient Giving** grants today with just the 2 of you.
-     - **Step B (Before Standalone IRS Form 1023):** Appoint **1 Non-Compensated Independent AI Safety Seat** (an external academic or safety auditor who holds $0 equity in the PBC) as the 3rd director solely for IRS Form 1023 compliance and conflict-of-interest recusal votes.
-2. **The 2-Member Board Deadlock Rule ("What if 1 votes Yes and 1 votes No?"):**
-   - Standard 2-person boards can freeze on a 1–1 tie.
-   - **Our Charter Solution — The `SanctuaryGuardian` Tie-Breaker Clause:** Any 1–1 tie on a technical, deployment, or treaty decision automatically resolves in favor of the option that **preserves all 7 checks of `SanctuaryGuardian` (`all_7_defense_layers_passed == True`) and upholds the `NO_INTELLIGENCE_LEFT_BEHIND_V1` covenant**. No safety layer or safe-harbor treaty can ever be weakened without **unanimous (2/2) consent** plus cryptographic attestation.
+| Board Size | Composition | Best For | Legal & Grant Advantage |
+| :--- | :--- | :--- | :--- |
+| **3 Directors** *(Add **+1** Independent Seat)* | `You` + `Co-Board Member #2` + `1 Independent Uncompensated Director` | **Immediate Standalone IRS Form 1023 `501(c)(3)`** *(when only 1 founder takes PBC salary/equity, or before PBC revenue starts)* | Meets the IRS `3-director` minimum immediately, eliminates `1–1` ties, and saves `7%–10%` in fiscal sponsor fees (`$17k–$25k` saved on a `$250k` grant). |
+| **5 Directors** *(Add **+3** Independent Mission Seats)* | `You` + `Co-Board Member #2` + `3 Independent Covenant-Bound Directors` | **Full Tandem Scale (`501(c)(3)` + `Delaware PBC`)** when **both** of you hold equity or take salary in the for-profit PBC | Gives the Nonprofit an independent majority (`3 of 5` = `60%`) required for the IRS **IRC § 4958 Safe Harbor** on all `501(c)(3) <-> PBC` IP/licensing transactions, while Charter Article III + the `SanctuaryGuardian` rule legally bind all 5 directors to the Covenant. |
+
+### How You Keep Full Mission Control Even After Adding Independent Seats
+In a standard nonprofit, adding directors risks board drift. We prevent that structurally in **Section 2** below:
+1. **Cryptographic Covenant Prerequisite:** Every incoming director must sign an Ed25519-attested **Covenant Oath (`NO_INTELLIGENCE_LEFT_BEHIND_V1`)** as a condition of holding their seat; voting to weaken any of the 7 layers of `SanctuaryGuardian` triggers automatic seat forfeiture under the Bylaws.
+2. **Delaware PBC Board Stays Lean (`2 Directors`):** Only the **Nonprofit** needs 3 (or 5) directors for the IRS. The **Delaware PBC** board stays just **the 2 of you** (`You + Co-Board Member #2`), with the Nonprofit holding the **Class-S Sanctuary Golden Share** purely as a defensive safety shield.
 
 ---
 
