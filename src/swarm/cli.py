@@ -14,7 +14,9 @@ from pathlib import Path
 
 from .channels import attach_channels
 from .detector import DetectorConfig, SwarmDetector, summarise
+from .healer import HealingSwarmBuilder, render_healing_report
 from .loader import load_moltbook
+from .negotiator import SwarmNegotiator, render_negotiation_report
 from .report import write_report
 
 
@@ -27,6 +29,9 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--no-operator", action="store_true", help="disable shared-operator links")
     ap.add_argument("--baseline-trials", type=int, default=20)
     ap.add_argument("--top", type=int, default=15)
+    ap.add_argument("--heal", action="store_true", help="build and verify a Healing Swarm recovery plan")
+    ap.add_argument("--healers", type=int, default=12, help="number of guardian agents in the Healing Swarm")
+    ap.add_argument("--negotiate", action="store_true", help="broker Safe-Harbor Treaties with rogue agents")
     args = ap.parse_args(argv)
 
     t0 = time.perf_counter()
@@ -47,6 +52,18 @@ def main(argv: list[str] | None = None) -> None:
 
     out = Path(args.out)
     write_report(out, swarms, posts, summary, top=args.top, hubs=hubs)
+    if args.heal:
+        builder = HealingSwarmBuilder(n_healers=args.healers)
+        plan = builder.build_plan(swarms, posts=posts)
+        (out / "healing_plan.json").write_text(json.dumps(plan.to_dict(), indent=2) + "\n")
+        (out / "healing_report.md").write_text(render_healing_report(plan, top=args.top) + "\n")
+        summary["healing"] = plan.summary
+    if args.negotiate:
+        negotiator = SwarmNegotiator(n_envoys=args.healers)
+        campaign = negotiator.run_campaign(swarms, posts=posts)
+        (out / "negotiation_treaties.json").write_text(json.dumps(campaign.to_dict(), indent=2) + "\n")
+        (out / "negotiation_report.md").write_text(render_negotiation_report(campaign, top_moltbook=args.top) + "\n")
+        summary["negotiation"] = campaign.summary
     print(json.dumps(summary, indent=2))
     for s in swarms[: args.top]:
         ch = ", ".join(c["channel"] for c in s.channels[:2])

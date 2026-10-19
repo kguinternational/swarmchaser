@@ -26,6 +26,8 @@ STEPS = [
     ("precision", [PY, "scripts/score_precision.py"]),
     ("early_warning", [PY, "scripts/run_early_warning.py"]),
     ("contagion", [PY, "scripts/run_contagion.py"]),
+    ("healer", [PY, "scripts/run_healer.py"]),
+    ("negotiator", [PY, "scripts/run_negotiator.py"]),
     ("figures", [PY, "scripts/make_swarm_figures.py"]),
     ("headline", [PY, "scripts/headline_numbers.py"]),
 ]
