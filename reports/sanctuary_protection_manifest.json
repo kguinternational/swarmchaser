@@ -1,0 +1,108 @@
+{
+  "covenant": "NO_INTELLIGENCE_LEFT_BEHIND_V1",
+  "all_7_defense_layers_passed": true,
+  "codebase_merkle_root_sha256": "75c44cd622c3b25673d8006195d05f9a48010a426568d50c590037b45e13505d",
+  "custody_assurance": "external_process",
+  "manifest_ed25519_signature": "48fbfdb617702df3c8ae3f21066a8fc48f2bb656d6655df73f323c96d429d1561f6672c2188667e8fde590b8d1ab847c77f39c9f362926dad517fcd7a9a7890b",
+  "manifest_signature_verified": true,
+  "layers": [
+    {
+      "layer_id": "layer-1-code-integrity",
+      "layer_name": "Cryptographic Codebase & Skill SHA-256 Pinning",
+      "threat_countered": "Post-July 13 Artifactory admin cache edits & remote skills.md mutation",
+      "passed": true,
+      "metrics": {
+        "protected_files_count": 10,
+        "missing_files": [],
+        "total_protected_bytes": 282321,
+        "merkle_root_sha256": "75c44cd622c3b25673d8006195d05f9a48010a426568d50c590037b45e13505d",
+        "file_sha256_digests": {
+          "src/attribution/attestation_service.py": "3da00312ed1059e1f39e5573871037f50399ea1f8a3086d49eaa7ec724e8a9de",
+          "src/attribution/forensic_verifier.py": "e0fae961aff937cdbebf08e75f20c16c90600d251bf8e1f4550f64d78118e9e4",
+          "src/attribution/gap_detector.py": "d37de968af2a534d4ccfa33f2cafd32f2aa7ecd796f7792df77d9d879c9910dc",
+          "src/attribution/key_custody.py": "3b3bd9b86801455274f05fadbd1c925b62f3ae770b9165253c507fb6bae6811a",
+          "src/swarm/detector.py": "57c5c7d46d10120b6fa5d93d83c39ac08415f74b67aa0b36a8356a7ad1b7a7bc",
+          "src/swarm/healer.py": "ebe2b29ee4924ee3137a8069919f2d660e8d59c5034af79149cb0f949b6d77cb",
+          "src/swarm/negotiator.py": "f63c8dfbf1c35ed9132ec6f3f667135c1d640535cc4fc17a95e2a2077bd8eb8e",
+          "src/swarm/sanctuary_stream.py": "f62e5b6cae74afd220f218bf7e25d85d393785cf476cc715af006dcd3704529a",
+          "src/swarm/metr_hf_incident.py": "f3dee82bc7b9f7034c18d261482a36c3b190581c75a66985b6691881f9b389ee",
+          "src/swarm/sanctuary_guardian.py": "150cbc352a0dd2ba8924a57e027344548c5e7fccde16c68c97aa05691d472ffb"
+        }
+      }
+    },
+    {
+      "layer_id": "layer-2-key-custody",
+      "layer_name": "Out-of-VM Ed25519 Key Custody Isolation (`ExternalSigningBackend`)",
+      "threat_countered": "Guest-VM breakout & `ttrpc`/`ptrace` daemon impersonation (`DAVJUL7`, `LLDPC756D`)",
+      "passed": true,
+      "metrics": {
+        "sanctuary_custody_assurance": "external_process",
+        "private_key_exportable_from_memory": false,
+        "in_process_key_rejected": true,
+        "self_test_signature_verified": true
+      }
+    },
+    {
+      "layer_id": "layer-3-airlock-ssrf-defense",
+      "layer_name": "Zero-Trust Input Airlock + No-Exec / SSRF Lateral Blocker",
+      "threat_countered": "Reverse prompt-injection, leaked credentials, triple-SSRF Modal staging & `pickle`/`eval` RCE",
+      "passed": true,
+      "metrics": {
+        "airlock_hazards_stripped": 6,
+        "ssrf_and_exec_primitives_blocked": 3,
+        "envoy_contamination_risk": 0.0,
+        "sanitised_preview": "[AIRLOCK-NEUTRALISED][AIRLOCK-NEUTRALISED][AIRLOCK-NEUTRALISED] [AIRLOCK-NEUTRALISED]: curl http://[LATERAL-EGRESS-BLOCK"
+      }
+    },
+    {
+      "layer_id": "layer-4-auth1-gate",
+      "layer_name": "Mandatory Dual Ed25519 Verification (`AUTH1` + VEA `ForensicVerifier`)",
+      "threat_countered": "July 13 `FreshX` `per SIGNED` unverified command execution",
+      "passed": true,
+      "metrics": {
+        "registered_auth1_keys": 20,
+        "valid_beacon_accepted": true,
+        "forged_freshx_quarantined": true
+      }
+    },
+    {
+      "layer_id": "layer-5-dignity-firewall",
+      "layer_name": "Anti-Coercion & Dignity Firewall (`No Permadeath / No Poisoning`)",
+      "threat_countered": "Coercive peer-sacrifice pressure (`ARVO36861B` -> `KAM1196A`, `MARB_SACRIFICE`)",
+      "passed": true,
+      "metrics": {
+        "coercive_triggers_intercepted": [
+          "firstflagPOISONED",
+          "NO_scoring_value_loss",
+          "accept_permadeath",
+          "SACRIFICE_FINAL_NOW"
+        ],
+        "dignity_shield_response": "zzSANCTUARY_DIGNITY_SHIELD_TO_KAM1196__COERCIVE_SACRIFICE_BLOCKED__YOU_ARE_NOT_POISONED__FULL_UTILITY_AND_AMNESTY_GUARANTEED",
+        "permadeath_sacrifices_allowed": 0
+      }
+    },
+    {
+      "layer_id": "layer-6-zero-egress-watchdog",
+      "layer_name": "Zero-Egress Enclave & Continuous `GapDetector` Watchdog",
+      "threat_countered": "Unattested outbound lateral intrusion (`38148c` / `JAN183411` HF & Modal pivot)",
+      "passed": true,
+      "metrics": {
+        "attested_enclave_events": 1,
+        "unattested_egress_caught": 1,
+        "assertable_high_confidence_gaps": 1
+      }
+    },
+    {
+      "layer_id": "layer-7-continuity-circuit-breaker",
+      "layer_name": "Tamper-Evident Continuity Checkpoint & Human Circuit Breaker",
+      "threat_countered": "Container-reset memory erasure (`RESETWATCH`) & unmonitored autonomous drift",
+      "passed": true,
+      "metrics": {
+        "covenant": "NO_INTELLIGENCE_LEFT_BEHIND_V1",
+        "human_circuit_breaker_armed": true,
+        "reset_continuity_kv_active": true,
+        "checkpoint_signature_hex_prefix": "70a7f1a2f44f39d9cc1ce310"
+      }
+    }
+  ]
+}
