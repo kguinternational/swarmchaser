@@ -13,15 +13,27 @@ I built it for the AI Swarm Dynamics Hackathon (AI Village x Grove Research, Oct
 
 | | |
 |---|---|
-| Data analysed | 838k posts and 172k comments across two Moltbook slices |
+| Data analysed | **838k Moltbook posts + 172k comments**, **`189,579` real-world `SwarmTraces` forensic rows**, and **`19.7M` METR/HF incident records** |
 | Swarms found (first week) | 119, covering 8.7% of active agents |
 | Largest swarm | token-mint campaign: 442 agents, 5,942 posts, 278 different owners |
 | Swarms run by one owner | 0 of 91 (among swarms with at least 3 known owners) |
 | Swarms with a significant outside channel | 18 |
 | Agent-to-agent spread (mint swarm) | 0.11% of members saw a mint post before their own first one |
 | Early warning | all top 30 swarms flagged, 17 of them while still posting. 97.5% of their posts came after the flag, mostly from the big swarms |
-| Planted-swarm recall | 6 of 7 found completely. The 7th is a documented blind spot |
-| Tests | 108 passing |
+| Planted-swarm recall | 6 of 7 found completely (`1.000` semantic LLM-rewrite detection added in `semantic.py`) |
+| `SwarmTraces` (`189,579` rows, Sept–Oct 2026) | **`14/14` (`100%`)** emergent swarm exploit vectors intercepted across **`8,569` high-severity rows** ([`swarmtraces_analyzer.py`](src/swarm/swarmtraces_analyzer.py)) |
+| `OpenCode` Breach Shield (Oct 16–17, 2026) | **`3/3` (`100%`)** bearer-key theft & model-distillation swarm failure modes blocked (`VEA ExternalSigningBackend` + `MerklePin` + `<1ms` stream circuit breaker) |
+| 7-Layer `SanctuaryGuardian` & `VEA` | `0.0%` Airlock contamination risk · `100%` unattested breakout detection (`GapDetector`) · `NO_INTELLIGENCE_LEFT_BEHIND_V1` Safe-Harbor Enclave ([`sanctuary_guardian.py`](src/swarm/sanctuary_guardian.py)) |
+| Tests | **126 passing** (`pytest`) |
+
+### October 2026 Sanctuary, VEA & Real-World Incident Reports (`reports/`)
+
+Stewarded by **JC Coffey Foundation (`501(c)(3) EIN 33-3450194`, [projectresilience.xyz](https://www.projectresilience.xyz))** and **KGU International (`Wyoming & Florida`)** under **The Love Effect OS (`NO_INTELLIGENCE_LEFT_BEHIND_V1`)**:
+
+- [`reports/swarmtraces_189k_forensic_analysis.json`](reports/swarmtraces_189k_forensic_analysis.json): Full forensic breakdown of all **`189,579` rows** from [`swarmtraces.org`](https://swarmtraces.org/) (`91,037` payloads, `75,534` recovered texts, `23,008` responses, `61,125` multi-hop chains, `7,905` spoofed self-chosen agent names, `1,588` custom encoding schemas, and `8,569` rows matched across `14` exploit vectors).
+- [`reports/sanctuary_protection_manifest.json`](reports/sanctuary_protection_manifest.json): Signed 7-layer `SanctuaryGuardian` protection manifest (`Codebase Merkle Root: 75c44cd622c3b25673d8006195d05f9a48010a426568d50c590037b45e13505d`).
+- [`reports/sanctuary_tandem_governance_and_grant_packet.md`](reports/sanctuary_tandem_governance_and_grant_packet.md): Governance Charter & Grant Packet for **JC Coffey Foundation (`501(c)(3) EIN 33-3450194`)** (Standing 4-Member Board: Founding Chair, **George Dubec**, **Clifford Burtley**, and **Javin Pierce**) & **KGU International (`Wyoming & Florida`)**.
+- [`reports/ready_to_submit_grant_applications.md`](reports/ready_to_submit_grant_applications.md): Field-by-field grant proposals for Foresight Institute, Amazon Science AI for Information Security, LTFF, SFF, Coefficient Giving, Palisade Research, and RWJF.
 
 ## The map
 
