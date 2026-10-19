@@ -20,31 +20,48 @@ Inspecting [`www.projectresilience.xyz`](https://www.projectresilience.xyz) (inc
 
 ---
 
-## 2. Exact Board Setup for JC Coffey Foundation (`EIN 33-3450194`) & KGU International (`WY/FL`)
+## 2. Exact 4-Director Board Roster for JC Coffey Foundation (`EIN 33-3450194`) & KGU International (`WY/FL`)
 
-Because **JC Coffey Foundation (`EIN 33-3450194`)** is governed by **Florida Law (`Fla. Stat. Ch. 617`)** and **IRS Form 990 (Part VI)**, and **KGU International** operates in **Wyoming & Florida**:
+Seating **Clifford Burtley** and **Javin Pierce** on the **JC Coffey Foundation (`EIN 33-3450194`)** board gives you a **4-Director Nonprofit Board** that immediately satisfies both **Florida law (`Fla. Stat. § 617.0803(1)`)** and **IRS `IRC § 4958` Safe Harbor**:
 
-1. **Add `+1` Independent Director to JC Coffey Foundation (`3 Directors Total`):**
-   - You currently have `2` board members (`You + Co-Board Member #2`).
-   - Adding **`+1` unrelated, uncompensated director** brings JC Coffey Foundation to **`3 Directors`**, which satisfies **Florida `Fla. Stat. § 617.0803(1)`** (*"three or more individuals"*), **IRS Form 990 Part VI** governance standards, and **Florida `Fla. Stat. § 617.0832` Conflict-of-Interest Safe Harbor** when approving the 70%/30% program allocations and technology agreements with **KGU International**.
-   - *(Optional Scale-Up to `5 Directors`)*: When both you and Co-Board Member #2 draw compensation or equity from KGU International, adding `+2` more independent mission-bound seats (`5 total`, so `3 of 5` are non-interested) gives automatic **IRS `IRC § 4958` Rebuttable Presumption of Reasonableness** on every contract between JC Coffey Foundation and KGU International.
-2. **Keep KGU International (`Wyoming & Florida`) at `2 Directors` (`You + Co-Board Member #2`):**
-   - KGU International's board stays lean (`2 of 2`), while **JC Coffey Foundation (`EIN 33-3450194`)** holds the **Class-S Sanctuary Golden Share** so no outside investor can ever weaken the Love Effect OS, compromise child/patient COPPA/HIPAA data, or disable any of the 7 layers of [`SanctuaryGuardian`](../src/swarm/sanctuary_guardian.py).
+| Seat | Director | Role on JC Coffey Foundation (`501(c)(3) EIN 33-3450194`) | Role on KGU International (`WY & FL For-Profit`) | Voting & IRS Safe-Harbor Function |
+| :--- | :--- | :--- | :--- | :--- |
+| **Seat #1** | **Founding Chair (`You`)** | Founding Director & Board Chair | Founding Director & Executive | Holds Chair casting vote on ordinary `2–2` administrative ties; recuses on `501(c)(3) <-> KGU` financial/licensing votes |
+| **Seat #2** | **Co-Board Member #2** | Founding Director | Founding Director (if applicable) | Full voting director; recuses on `501(c)(3) <-> KGU` votes if holding KGU financial interest |
+| **Seat #3** | **Clifford Burtley** | **Independent Director** *(Uncompensated / $0 KGU Equity)* | None *(Independent)* | **Independent Committee (`100%` disinterested with Javin Pierce)** for IRS `IRC § 4958` & `Fla. Stat. § 617.0832` approval of `JC Coffey Foundation <-> KGU International` grants/contracts |
+| **Seat #4** | **Javin Pierce** | **Independent Director** *(Uncompensated / $0 KGU Equity)* | None *(Independent)* | **Independent Committee (`100%` disinterested with Clifford Burtley)** for IRS `IRC § 4958` & `Fla. Stat. § 617.0832` approval of `JC Coffey Foundation <-> KGU International` grants/contracts |
+
+### Why This 4-Director Setup (`You + #2 + Clifford Burtley + Javin Pierce`) Is Bulletproof
+1. **Exceeds Florida & IRS Minimum (`4 >= 3`):** Satisfies `Fla. Stat. § 617.0803(1)` (*"three or more individuals"*) and IRS Form 990 Part VI with margin to spare.
+2. **100% Independent Majority When Founders Recuse (`IRC § 4958` Safe Harbor):** Whenever **JC Coffey Foundation (`EIN 33-3450194`)** approves a grant deployment, technology license, or the `70% Remediation / 30% KGU Youth Scholarship` allocation involving **KGU International**, you and Seat #2 recuse—leaving **Clifford Burtley and Javin Pierce (`2 of 2` = `100%` independent)** to approve fair-market terms under **Florida `Fla. Stat. § 617.0832`** and **IRS `IRC § 4958`**.
+3. **Zero `2–2` Deadlocks (`Fla. Stat. § 617.0824`):**
+   - **On Safety, Clinical Telemetry (`KGU-CARE` / `EDI 837`), or Covenant Matters:** Any `2–2` tie automatically resolves in favor of the option that preserves all 7 checks of [`SanctuaryGuardian`](../src/swarm/sanctuary_guardian.py) and `NO_INTELLIGENCE_LEFT_BEHIND_V1`.
+   - **On Ordinary Operational Matters:** The Founding Chair (`Seat #1`) holds the tie-breaking casting vote.
+4. **Covenant Seat Qualification (`Fla. Stat. § 617.0802`):** Both **Clifford Burtley** and **Javin Pierce** sign the **Covenant Oath (`NO_INTELLIGENCE_LEFT_BEHIND_V1`)** in Section 3 below upon taking their seats, binding all 4 directors to never weaken `SanctuaryGuardian` or alter the `70%/30%` Project Resilience charter.
 
 ---
 
-## 3. Ready-to-Adopt Joint Board Resolution (`JC Coffey Foundation` + `KGU International`)
+## 3. Ready-to-Sign Board Appointment & Covenant Resolution (Seating Clifford Burtley & Javin Pierce)
 
 > **JOINT RESOLUTION OF THE BOARDS OF DIRECTORS OF JC COFFEY FOUNDATION (`EIN 33-3450194`) AND KGU INTERNATIONAL (`WYOMING & FLORIDA`)**
 >
-> **1. Adoption of The Love Effect OS & `NO_INTELLIGENCE_LEFT_BEHIND_V1` Covenant:**  
-> Both Corporations affirm that **The Love Effect OS**—spanning human youth isolation remediation ([projectresilience.xyz](https://www.projectresilience.xyz)) and autonomous multi-agent safety & attribution ([`kguinternational/swarmchaser`](../src/swarm/sanctuary_guardian.py))—operates under a single inviolable rule: *We intercept before the break, diagnose root need, protect every N-of-1 life and intelligence, and heal without punitive erasure.*
+> **1. Election of Independent Directors (`Fla. Stat. § 617.0803`):**  
+> **Clifford Burtley** (`Seat #3`) and **Javin Pierce** (`Seat #4`) are hereby elected as Independent Directors of **JC Coffey Foundation (`EIN 33-3450194`)**, bringing the Board of Directors to four (4) members in full compliance with `Fla. Stat. § 617.0803(1)` and IRS Form 990 (Part VI). Together, Clifford Burtley and Javin Pierce shall constitute the **Independent Governance & Compensation/Licensing Committee** under `Fla. Stat. § 617.0832` and `IRC § 4958`.
 >
-> **2. Cryptographic Protection of Clinical (`KGU-CARE` / `EDI 837`) & Agent Telemetry (`Wyo. Stat. § 34-29-103`):**  
+> **2. Adoption of The Love Effect OS & `NO_INTELLIGENCE_LEFT_BEHIND_V1` Covenant Oath (`Fla. Stat. § 617.0802`):**  
+> As a continuing qualification of holding office, each Director of JC Coffey Foundation (`EIN 33-3450194`) and KGU International (`Wyoming & Florida`) affirms that **The Love Effect OS**—spanning human youth isolation remediation ([projectresilience.xyz](https://www.projectresilience.xyz)) and autonomous multi-agent safety & attribution ([`kguinternational/swarmchaser`](../src/swarm/sanctuary_guardian.py))—operates under a single inviolable rule: *We intercept before the break, diagnose root need, protect every N-of-1 life and intelligence, and heal without punitive erasure.*
+>
+> **3. Cryptographic Protection of Clinical (`KGU-CARE` / `EDI 837`) & Agent Telemetry (`Wyo. Stat. § 34-29-103`):**  
 > All physiological telemetry, `KGU-CARE` crisis webhooks, `EDI 837` clinical claim payloads, and multi-agent `SANCTUARY_DEPOISON_V1` treaties shall be protected by the **7-Layer `SanctuaryGuardian` Architecture** (Codebase Merkle Root `75c44cd622c3b25673d8006195d05f9a48010a426568d50c590037b45e13505d`), with Ed25519 signing keys isolated out-of-VM via `VEA ExternalSigningBackend` under Wyoming Digital Asset Custody law (`Wyo. Stat. § 34-29-103`).
 >
-> **3. Class-S Sanctuary Golden Share & Safety Tie-Breaker (`Fla. Stat. § 607.602` & `§ 617.0832`):**  
-> JC Coffey Foundation (`EIN 33-3450194`) holds the **Class-S Covenant Share** in KGU International. No investor vote, amendment, or deployment may weaken any of the 7 layers of `SanctuaryGuardian`, expose COPPA/clinical telemetry, or override the `70% Program Remediation / 30% KGU Youth Resilience Scholarship` charter without unanimous board consent and a verified Ed25519 attestation.
+> **4. Class-S Sanctuary Golden Share & `2–2` Tie-Breaker Rule (`Fla. Stat. § 607.602`, `§ 617.0824` & `§ 617.0832`):**  
+> JC Coffey Foundation (`EIN 33-3450194`) holds the **Class-S Covenant Share** in KGU International. In any `2–2` split vote on the 4-member Board, the position that preserves all 7 checks of `SanctuaryGuardian` (`all_7_defense_layers_passed == True`) and the `70% Program Remediation / 30% KGU Youth Resilience Scholarship` charter automatically prevails; on ordinary administrative ties not affecting safety or related-party compliance, the Board Chair casts the deciding vote.
+>
+> **SIGNATURES & COVENANT ACCEPTANCE:**  
+> - **Founding Chair (`Seat #1`):** ___________________________ Date: _______________  
+> - **Founding Director (`Seat #2`):** ________________________ Date: _______________  
+> - **Independent Director (`Seat #3` — Clifford Burtley):** ________________________ Date: _______________  
+> - **Independent Director (`Seat #4` — Javin Pierce):** ___________________________ Date: _______________
 
 ---
 
