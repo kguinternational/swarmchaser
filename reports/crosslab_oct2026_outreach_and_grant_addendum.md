@@ -1,5 +1,9 @@
 # Cross-Lab Rogue Agent Emergency Advisory & Exhibit C Grant Packet (October 2026)
 
+**Official Registered Headquarters:** `1395 Brickell Ave, Miami, FL 33131`  
+**Founding Chair (Seat #1):** **Joann Coffey** (`jccoffey@jccoffeyfoundation.org`)  
+**Unified Covenant:** **All Data Matters × The Love Effect (`NO_INTELLIGENCE_LEFT_BEHIND_V1`)**  
+
 **Issuing Entities:**
 - **JC Coffey Foundation (`501(c)(3) EIN 33-3450194`)** — Registered Florida Public Charity (`https://www.projectresilience.xyz` · `70% Direct Remediation / 30% KGU Youth Resilience Scholarship`)
   - **Standing 4-Member Board of Directors:**
