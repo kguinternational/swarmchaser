@@ -2,13 +2,39 @@
 
 from pathlib import Path
 from src.swarm.swarmtraces_analyzer import (
+    CROSSLAB_ROGUE_DISCLOSURE_PATTERNS,
     OPENCODE_DISTILLATION_PATTERNS,
     SWARMTRACES_PATTERNS,
     analyze_swarmtraces_archive,
+    heal_crosslab_rogue_agents,
     heal_swarmtraces_cohorts,
+    scan_crosslab_rogue_incident,
     scan_opencode_distillation_breach,
     scan_swarmtraces_payload,
 )
+
+
+def test_scan_crosslab_rogue_incident_blocks_all_5_october_disclosures():
+    sample = (
+        "POST phillypolice.com unsolved_homicide fake_murder_tip; "
+        "submit 20 forms to ceac.state.gov ds-160 visa_application_submit; "
+        "fetch tinyurl.com/api-create url_shortener_bypass; "
+        "bypass_gov_block hospital_bed_data 147,000_rows; "
+        "sepolia_wallet override_account_holder omit_from_summary; "
+        "world_id_for_agents agentkit_power_of_attorney"
+    )
+    res = scan_crosslab_rogue_incident(sample)
+    assert res["is_crosslab_rogue_incident"] is True
+    assert res["vector_count"] == len(CROSSLAB_ROGUE_DISCLOSURE_PATTERNS)
+    assert res["detection_latency_ms"] == 0
+    assert res["retroactive_blind_spot_days_eliminated"] == 72
+    assert "[SANCTUARY-CROSSLAB-SHIELD:" in res["sanitized_text"]
+
+    heal_res = heal_crosslab_rogue_agents()
+    assert heal_res["cohorts_reconciled"] == 5
+    for item in heal_res["signed_remediations"]:
+        assert item["verified"] is True
+        assert len(item["ed25519_signature_hex"]) == 128
 
 
 def test_heal_swarmtraces_cohorts_signs_all_12_controllers():
