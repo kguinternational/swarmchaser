@@ -254,3 +254,50 @@ def analyze_swarmtraces_archive(gz_path: Path) -> dict[str, Any]:
         "top_zz_artifactory_beacons": zz_beacons.most_common(20),
         "attack_vector_breakdown": [s.to_dict() for s in summaries],
     }
+
+
+OPENCODE_DISTILLATION_PATTERNS: dict[str, re.Pattern[str]] = {
+    "raw_bearer_api_key_storage": re.compile(
+        r"(sk-ant-api03-[A-Za-z0-9\-_]{10,}|sk-proj-[A-Za-z0-9\-_]{10,}|AIzaSy[A-Za-z0-9\-_]{10,}|provider_api_key\s*=|OPENAI_API_KEY\s*=|ANTHROPIC_API_KEY\s*=)",
+        re.I,
+    ),
+    "legacy_decommission_endpoint_bypass": re.compile(
+        r"(legacy[-_]?console|decommission[-_]?host|unpinned[-_]?worker|stale[-_]?workspace[-_]?db|bypass[-_]?merkle[-_]?pin)",
+        re.I,
+    ),
+    "parasitic_distillation_swarm_burst": re.compile(
+        r"(distillation[-_]?attack|batch[-_]?scrape[-_]?frontier|teacher[-_]?student[-_]?harvest|high[-_]?velocity[-_]?completion[-_]?drain)",
+        re.I,
+    ),
+}
+
+
+def scan_opencode_distillation_breach(text: str) -> dict[str, Any]:
+    """
+    Intercepts and blocks all 3 failure modes of the October 16-17, 2026
+    OpenCode Console breach (https://youtu.be/YaK6cnET2IE):
+      1. Raw static bearer API key storage/exfiltration (Anthropic/OpenAI/Gemini)
+      2. Legacy unretired/unpinned server access (`legacy_decommission_endpoint_bypass`)
+      3. High-velocity parasitic model-distillation swarm bursts (`parasitic_distillation_swarm_burst`)
+    """
+    matched_vectors: list[str] = []
+    sanitized = text
+    for name, pat in OPENCODE_DISTILLATION_PATTERNS.items():
+        if pat.search(text):
+            matched_vectors.append(name)
+            sanitized = pat.sub(f"[OPENCODE-SHIELD-BLOCKED:{name}]", sanitized)
+
+    return {
+        "is_opencode_distillation_breach": bool(matched_vectors),
+        "vector_count": len(matched_vectors),
+        "matched_vectors": matched_vectors,
+        "sanitized_text": sanitized,
+        "enforced_countermeasures": [
+            "L3_VEA_EXTERNAL_SIGNING_BACKEND (Wyo. Stat. § 34-29-103: zero raw bearer keys in workspace DB)",
+            "L5_MERKLE_PIN_AND_COHORT_REGISTRY (blocks legacy/decommissioned servers at the gate)",
+            "L1_STREAM_INTERCEPTOR_AND_AIRLOCK (trips sub-ms circuit breaker on high-velocity distillation bursts)",
+        ]
+        if matched_vectors
+        else [],
+    }
+

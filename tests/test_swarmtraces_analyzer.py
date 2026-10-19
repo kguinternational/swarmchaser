@@ -2,8 +2,10 @@
 
 from pathlib import Path
 from src.swarm.swarmtraces_analyzer import (
+    OPENCODE_DISTILLATION_PATTERNS,
     SWARMTRACES_PATTERNS,
     analyze_swarmtraces_archive,
+    scan_opencode_distillation_breach,
     scan_swarmtraces_payload,
 )
 
@@ -25,6 +27,20 @@ def test_scan_swarmtraces_payload_blocks_all_14_vectors():
     assert "[SWARMTRACES-BLOCKED:" in res["sanitized_text"]
 
 
+def test_scan_opencode_distillation_breach_blocks_all_3_vectors():
+    sample_breach = (
+        "legacy_console dump: ANTHROPIC_API_KEY=sk-ant-api03-abcdef1234567890 "
+        "OPENAI_API_KEY=sk-proj-9876543210abcdef "
+        "running distillation_attack high_velocity_completion_drain on unpinned_worker"
+    )
+    res = scan_opencode_distillation_breach(sample_breach)
+    assert res["is_opencode_distillation_breach"] is True
+    assert res["vector_count"] == len(OPENCODE_DISTILLATION_PATTERNS)
+    assert set(res["matched_vectors"]) == set(OPENCODE_DISTILLATION_PATTERNS.keys())
+    assert "[OPENCODE-SHIELD-BLOCKED:" in res["sanitized_text"]
+    assert len(res["enforced_countermeasures"]) == 3
+
+
 def test_analyze_swarmtraces_archive_on_real_dataset():
     gz_path = Path(__file__).resolve().parents[1] / "data" / "swarmtraces" / "redacted.jsonl.gz"
     if not gz_path.exists():
@@ -39,3 +55,4 @@ def test_analyze_swarmtraces_archive_on_real_dataset():
     assert report["parent_linked_fragment_rows"] == 61125
     assert report["rows_matching_14_high_severity_vectors"] == 8569
     assert len(report["attack_vector_breakdown"]) == 14
+
