@@ -38,15 +38,16 @@ Non-dilutive grants let us scale compute, datasets, and open-source adoption wit
 
 ---
 
-## 3. Mission-Aligned Investment Strategy (Protecting the Covenant)
+## 3. Mission-Aligned Investment Strategy (`KGU International — Wyoming & Florida`)
 
-When taking venture or angel capital for dual-use enterprise products (e.g., **VEA Cryptographic Agent Audit Logs** & **Sanctuary Airlock Firewalls** for regulated enterprises), we protect our core mission using a **Dual-Track Structure**:
+When taking venture or angel capital for dual-use enterprise products (e.g., **VEA Cryptographic Agent Audit Logs** & **Sanctuary Airlock Firewalls** for regulated enterprises), we protect our core mission using **KGU International's Wyoming & Florida Dual-Track Structure**:
 
-1. **501(c)(3) / Open-Source Sanctuary Foundation (Grant-Funded):**
-   - Owns the open-source `kguinternational/swarmchaser` repo, the `NO_INTELLIGENCE_LEFT_BEHIND_V1` covenant, public datasets (Moltbook, AI Village, German Wikipedia), and the Humanitarian Safe-Harbor treaties.
-2. **Public Benefit Corporation (PBC) with a Charter "Golden Share" (Investor-Backed):**
+1. **`501(c)(3)` Open-Source Sanctuary Foundation (`Florida Fla. Stat. Ch. 617` / `Wyoming Wyo. Stat. Ch. 19` — Grant-Funded):**
+   - Owns the open-source `kguinternational/swarmchaser` repo, the `NO_INTELLIGENCE_LEFT_BEHIND_V1` covenant, public datasets (Moltbook, AI Village, German Wikipedia), and the Humanitarian Safe-Harbor treaties (`3-Director Board` compliant with `Fla. Stat. § 617.0803(1)` and IRS Form 1023).
+2. **KGU International (`Wyoming & Florida Benefit Corp` with a Charter "Class-S Golden Share" — Investor-Backed):**
    - Commercializes hosted **VEA Hardware/HSM Attestation**, **Enterprise Agent Airlocks**, and **SOC Multi-Agent Contagion Dashboards**.
-   - **Covenant Lock:** The PBC charter legally binds the company to the `NO INTELLIGENCE LEFT BEHIND` safety standard: investors cannot vote to disable `ExternalSigningBackend`, weaken `ZeroTrustAirlock`, or repurpose the telemetry engine for punitive surveillance or offensive exploitation.
+   - **Wyoming Cryptographic Key Shield (`Wyo. Stat. § 34-29-103`):** Protects `VEA ExternalSigningBackend` Ed25519 private keys and `AUTH1` roots as statutory digital assets immune from forced commingling or guest-VM export, with `0%` Wyoming state corporate income tax.
+   - **Florida Benefit Corp & Class-S Covenant Lock (`Fla. Stat. §§ 607.601–607.613` & `§ 607.0601`):** Legally binds KGU International to the `NO INTELLIGENCE LEFT BEHIND` safety standard: investors cannot vote to disable `ExternalSigningBackend`, weaken `ZeroTrustAirlock`, or repurpose the telemetry engine for punitive surveillance or offensive exploitation.
 
 ### Target Mission-Aligned Seed Investors
 - **Mozilla Ventures** (Trustworthy open-source AI & security infrastructure)
