@@ -1,0 +1,16 @@
+# Optional dense retrieval for the lone channel (src/swarm/lone_embeddings.py).
+# Without these the detector runs on TF-IDF only and behaves exactly as before;
+# with them, `SemanticRecall(use_embeddings=True)` adds embeddinggemma-2 recall.
+#
+#   uv pip install --python .venv/bin/python -r requirements-dense.txt
+#
+# Weights are not downloaded here. Fetch them once:
+#
+#   hf download google/embeddinggemma-2 --local-dir ~/OpenBot/Shared/models/embeddinggemma-2
+#
+# Then enable with:
+#
+#   scripts/run_semantic_recall.py --embeddings
+#   (or set SWARM_EMBED_MODEL to a different local model directory)
+torch>=2.6
+transformers>=5.0

@@ -30,6 +30,7 @@ STEPS = [
     ("negotiator", [PY, "scripts/run_negotiator.py"]),
     ("figures", [PY, "scripts/make_swarm_figures.py"]),
     ("headline", [PY, "scripts/headline_numbers.py"]),
+    ("warehouse", [PY, "scripts/build_db.py"]),
 ]
 
 

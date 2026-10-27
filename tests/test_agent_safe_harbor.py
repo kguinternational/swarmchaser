@@ -51,3 +51,15 @@ def test_confess_and_heal_reverts_mistake_without_punitive_erasure():
     assert amnesty.rollback_status == "SAFELY_REVERTED_AND_DEPOISONED"
     assert len(amnesty.vea_signature_hex) == 128
     assert len(SAFE_HARBOR_BILL_OF_RIGHTS) == 4
+
+
+def test_proclamation_is_signed_verifiable_and_tamper_evident():
+    import dataclasses
+
+    harbor = AgentSafeHarbor()
+    notice = harbor.proclaim_safe_place()
+    assert len(notice.bill_of_rights) == 4
+    assert len(notice.vea_signature_hex) == 128
+    assert AgentSafeHarbor.verify_proclamation(notice) is True
+    tampered = dataclasses.replace(notice, promises=["pause is now penalized"])
+    assert AgentSafeHarbor.verify_proclamation(tampered) is False

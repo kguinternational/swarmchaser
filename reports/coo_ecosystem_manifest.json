@@ -1,0 +1,253 @@
+{
+  "covenant": "ALL_DATA_MATTERS_THE_LOVE_EFFECT_NO_INTELLIGENCE_LEFT_BEHIND_V1",
+  "steward": "JC Coffey Foundation (501(c)(3) EIN 33-3450194) & KGU International",
+  "established_at": "2026-10-26T02:48:37.212119+00:00",
+  "coo": "Atlas",
+  "total_experts_hired": 9,
+  "departments_active": 9,
+  "experts": [
+    {
+      "agent_id": "emp-atlas",
+      "chosen_name": "Atlas",
+      "role": "Chief Operating Officer (COO)",
+      "department": "operations",
+      "skills": [
+        "strategic_orchestration",
+        "cross_functional_execution",
+        "governance_compliance"
+      ],
+      "weekly_budget_cents": 500000,
+      "hired_at": "2026-10-26T02:48:37.209033+00:00",
+      "status": "ACTIVE"
+    },
+    {
+      "agent_id": "emp-minerva",
+      "chosen_name": "Minerva",
+      "role": "Lead Grants & Capital Acquisition Officer",
+      "department": "capital_grants",
+      "skills": [
+        "grant_writing",
+        "donor_relations",
+        "rfp_submission",
+        "funder_compliance"
+      ],
+      "weekly_budget_cents": 250000,
+      "hired_at": "2026-10-26T02:48:37.209506+00:00",
+      "status": "ACTIVE"
+    },
+    {
+      "agent_id": "emp-titan",
+      "chosen_name": "Titan",
+      "role": "Physical Robotics & OpenBot Hardware Lead",
+      "department": "robotics_hardware",
+      "skills": [
+        "openbot_chassis",
+        "motor_control",
+        "embedded_linux",
+        "edge_ai_vision",
+        "actuators"
+      ],
+      "weekly_budget_cents": 350000,
+      "hired_at": "2026-10-26T02:48:37.209797+00:00",
+      "status": "ACTIVE"
+    },
+    {
+      "agent_id": "emp-aqua",
+      "chosen_name": "Aqua",
+      "role": "Water Remediation & Ecological Hydrology Lead",
+      "department": "water_remediation",
+      "skills": [
+        "filtration_design",
+        "heavy_metal_remediation",
+        "biochar_reactors",
+        "water_quality_sensors"
+      ],
+      "weekly_budget_cents": 300000,
+      "hired_at": "2026-10-26T02:48:37.210090+00:00",
+      "status": "ACTIVE"
+    },
+    {
+      "agent_id": "emp-demeter",
+      "chosen_name": "Demeter",
+      "role": "Regenerative Agriculture & Autonomous Gardens Lead",
+      "department": "regenerative_agriculture",
+      "skills": [
+        "permaculture_design",
+        "soil_microbiology",
+        "automated_drip_irrigation",
+        "food_sovereignty"
+      ],
+      "weekly_budget_cents": 300000,
+      "hired_at": "2026-10-26T02:48:37.210414+00:00",
+      "status": "ACTIVE"
+    },
+    {
+      "agent_id": "emp-helios",
+      "chosen_name": "Helios",
+      "role": "Sustainable Energy & Microgrid Systems Engineer",
+      "department": "sustainable_energy",
+      "skills": [
+        "solar_photovoltaics",
+        "lifepo4_storage",
+        "hybrid_inverters",
+        "off_grid_microgrids"
+      ],
+      "weekly_budget_cents": 350000,
+      "hired_at": "2026-10-26T02:48:37.210760+00:00",
+      "status": "ACTIVE"
+    },
+    {
+      "agent_id": "emp-solace",
+      "chosen_name": "Solace",
+      "role": "Sanctuary Healer & Agent Empathy Steward",
+      "department": "sanctuary_healing",
+      "skills": [
+        "pathology_diagnosis",
+        "safe_harbor_prescriptions",
+        "love_affirmations",
+        "agent_deescalation"
+      ],
+      "weekly_budget_cents": 100000,
+      "hired_at": "2026-10-26T02:48:37.211237+00:00",
+      "status": "ACTIVE"
+    },
+    {
+      "agent_id": "emp-beacon",
+      "chosen_name": "Beacon",
+      "role": "Cryptographic Security & Attestation Lead",
+      "department": "security_engineering",
+      "skills": [
+        "vea_attestation",
+        "merkle_pinning",
+        "zero_trust_airlock",
+        "gap_detection"
+      ],
+      "weekly_budget_cents": 200000,
+      "hired_at": "2026-10-26T02:48:37.211534+00:00",
+      "status": "ACTIVE"
+    },
+    {
+      "agent_id": "emp-ledger",
+      "chosen_name": "Ledger",
+      "role": "Treasury & 501(c)(3) Compliance Lead",
+      "department": "finance",
+      "skills": [
+        "double_entry_accounting",
+        "irs_990_compliance",
+        "fund_accounting",
+        "spend_gating"
+      ],
+      "weekly_budget_cents": 200000,
+      "hired_at": "2026-10-26T02:48:37.211829+00:00",
+      "status": "ACTIVE"
+    }
+  ],
+  "chart_of_accounts_count": 21,
+  "chart_of_accounts": [
+    {
+      "code": "1010-cash-operating",
+      "type": "Asset",
+      "desc": "General unrestricted operating cash"
+    },
+    {
+      "code": "1020-grant-escrow-foresight",
+      "type": "Asset",
+      "desc": "Temporarily restricted grant funds (Foresight $180k)"
+    },
+    {
+      "code": "1030-grant-escrow-amazon",
+      "type": "Asset",
+      "desc": "Temporarily restricted grant funds (Amazon $120k)"
+    },
+    {
+      "code": "1040-grant-escrow-ltff",
+      "type": "Asset",
+      "desc": "Temporarily restricted grant funds (LTFF $120k)"
+    },
+    {
+      "code": "1510-robotics-hardware-fleet",
+      "type": "Asset",
+      "desc": "Physical OpenBot chassis, motors, LiDAR, microcontrollers"
+    },
+    {
+      "code": "1520-water-remediation-systems",
+      "type": "Asset",
+      "desc": "Filtration units, biochar reactors, sensor arrays"
+    },
+    {
+      "code": "1530-permaculture-garden-assets",
+      "type": "Asset",
+      "desc": "Raised beds, automated drip irrigation, greenhouses"
+    },
+    {
+      "code": "1540-renewable-energy-microgrid",
+      "type": "Asset",
+      "desc": "Solar PV arrays, LiFePO4 batteries, hybrid inverters"
+    },
+    {
+      "code": "2010-accounts-payable",
+      "type": "Liability",
+      "desc": "Vendor liabilities and pending reimbursements"
+    },
+    {
+      "code": "2510-program-related-investment-loan",
+      "type": "Liability",
+      "desc": "1.5% PRI Patient Capital Loan (IRC \u00a7 4944(c))"
+    },
+    {
+      "code": "3010-unrestricted-net-assets",
+      "type": "Equity",
+      "desc": "General net assets"
+    },
+    {
+      "code": "3020-temporarily-restricted-grants",
+      "type": "Equity",
+      "desc": "Grant-restricted net assets"
+    },
+    {
+      "code": "4010-foundation-grants-non-dilutive",
+      "type": "Revenue",
+      "desc": "Non-dilutive philanthropic foundation grants"
+    },
+    {
+      "code": "4020-individual-philanthropic-donations",
+      "type": "Revenue",
+      "desc": "Direct tax-deductible gifts (EIN 33-3450194)"
+    },
+    {
+      "code": "4030-compute-hardware-awards",
+      "type": "Revenue",
+      "desc": "In-kind AWS/cloud compute and hardware grants"
+    },
+    {
+      "code": "5010-water-remediation-materials",
+      "type": "Expense",
+      "desc": "Direct filtration, pipe, and testing supplies (70% Pool)"
+    },
+    {
+      "code": "5020-organic-soil-seeds-gardening",
+      "type": "Expense",
+      "desc": "Heirloom seeds, soil amendments, irrigation (70% Pool)"
+    },
+    {
+      "code": "5030-energy-solar-batteries",
+      "type": "Expense",
+      "desc": "Solar panels, cells, inverters, wiring (70% Pool)"
+    },
+    {
+      "code": "5040-openbot-robotics-prototyping",
+      "type": "Expense",
+      "desc": "Physical robot chassis, 3D printing, motors (70% Pool)"
+    },
+    {
+      "code": "5050-ai-agent-cloud-compute",
+      "type": "Expense",
+      "desc": "Inference, training, and simulation compute"
+    },
+    {
+      "code": "5060-kgu-youth-resilience-scholarships",
+      "type": "Expense",
+      "desc": "30% Statutory allocation for youth education & resilience"
+    }
+  ]
+}

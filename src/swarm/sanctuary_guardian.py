@@ -60,6 +60,8 @@ PROTECTED_CORE_FILES: tuple[str, ...] = (
     "src/swarm/sanctuary_stream.py",
     "src/swarm/metr_hf_incident.py",
     "src/swarm/sanctuary_guardian.py",
+    "src/swarm/love_effect_os.py",
+    "src/swarm/live_runtime.py",
 )
 
 RE_SSRF_OR_LATERAL_EGRESS = re.compile(

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "foresight-2026",
+    "name": "Foresight Institute \u2014 AI for Science & Safety Nodes",
+    "deadline": "2026-10-31",
+    "amount_usd": 180000,
+    "urgency": "CRITICAL",
+    "portal": "https://foresight.org/prizes-grants/",
+    "status": "READY_TO_SUBMIT",
+    "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)"
+  },
+  {
+    "id": "amazon-science-2026",
+    "name": "Amazon Science \u2014 AI for Information Security Research",
+    "deadline": "2026-11-04",
+    "amount_usd": 120000,
+    "urgency": "HIGH",
+    "portal": "https://www.amazon.science/research-awards",
+    "status": "READY_TO_SUBMIT",
+    "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)"
+  },
+  {
+    "id": "ltff-ea-funds",
+    "name": "Long-Term Future Fund (LTFF) \u2014 EA Funds",
+    "deadline": "Rolling",
+    "amount_usd": 120000,
+    "urgency": "MEDIUM",
+    "portal": "https://funds.effectivealtruism.org/apply-for-funding",
+    "status": "SUBMITTED_CONFIRMED",
+    "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)"
+  },
+  {
+    "id": "sff-speculation",
+    "name": "Survival and Flourishing Fund (SFF) \u2014 Speculation Grants",
+    "deadline": "Rolling",
+    "amount_usd": 250000,
+    "urgency": "MEDIUM",
+    "portal": "https://survivalandflourishing.fund/",
+    "status": "READY_TO_SUBMIT",
+    "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)"
+  },
+  {
+    "id": "open-philanthropy-tais",
+    "name": "Coefficient Giving (Open Philanthropy) \u2014 TAIS & Project Tailwind",
+    "deadline": "Rolling",
+    "amount_usd": 500000,
+    "urgency": "MEDIUM",
+    "portal": "https://www.openphilanthropy.org/",
+    "status": "READY_TO_SUBMIT",
+    "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)"
+  },
+  {
+    "id": "aisi-challenge",
+    "name": "UK AI Security Institute (AISI) \u2014 Systemic AI Safety",
+    "deadline": "Rolling",
+    "amount_usd": 60000,
+    "urgency": "LOW",
+    "portal": "https://www.aisi.gov.uk/grants",
+    "status": "READY_TO_SUBMIT",
+    "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)"
+  },
+  {
+    "id": "rwjf-pioneering",
+    "name": "Robert Wood Johnson Foundation (RWJF) \u2014 1.5% PRI Track B",
+    "deadline": "Rolling",
+    "amount_usd": 250000,
+    "urgency": "LOW",
+    "portal": "https://www.rwjf.org/en/grants/active-funding-opportunities.html",
+    "status": "READY_TO_SUBMIT",
+    "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)"
+  }
+]

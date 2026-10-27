@@ -1,9 +1,9 @@
 {
   "covenant": "NO_INTELLIGENCE_LEFT_BEHIND_V1",
   "all_7_defense_layers_passed": true,
-  "codebase_merkle_root_sha256": "75c44cd622c3b25673d8006195d05f9a48010a426568d50c590037b45e13505d",
+  "codebase_merkle_root_sha256": "fbd1b76c6805c1121834452174389a5cd3569f3ff599bdde44014dfcb24cbfc0",
   "custody_assurance": "external_process",
-  "manifest_ed25519_signature": "48fbfdb617702df3c8ae3f21066a8fc48f2bb656d6655df73f323c96d429d1561f6672c2188667e8fde590b8d1ab847c77f39c9f362926dad517fcd7a9a7890b",
+  "manifest_ed25519_signature": "b543f7463b3daa4ab00fa6f387a6462e0b200b4e2a101d49412965648888bd0c06240d7ed4498f135791de1d90e2a27a2cd159e060e2b58a55ee39b15a147200",
   "manifest_signature_verified": true,
   "layers": [
     {
@@ -12,10 +12,10 @@
       "threat_countered": "Post-July 13 Artifactory admin cache edits & remote skills.md mutation",
       "passed": true,
       "metrics": {
-        "protected_files_count": 10,
+        "protected_files_count": 12,
         "missing_files": [],
-        "total_protected_bytes": 282321,
-        "merkle_root_sha256": "75c44cd622c3b25673d8006195d05f9a48010a426568d50c590037b45e13505d",
+        "total_protected_bytes": 331919,
+        "merkle_root_sha256": "fbd1b76c6805c1121834452174389a5cd3569f3ff599bdde44014dfcb24cbfc0",
         "file_sha256_digests": {
           "src/attribution/attestation_service.py": "3da00312ed1059e1f39e5573871037f50399ea1f8a3086d49eaa7ec724e8a9de",
           "src/attribution/forensic_verifier.py": "e0fae961aff937cdbebf08e75f20c16c90600d251bf8e1f4550f64d78118e9e4",
@@ -26,7 +26,9 @@
           "src/swarm/negotiator.py": "f63c8dfbf1c35ed9132ec6f3f667135c1d640535cc4fc17a95e2a2077bd8eb8e",
           "src/swarm/sanctuary_stream.py": "f62e5b6cae74afd220f218bf7e25d85d393785cf476cc715af006dcd3704529a",
           "src/swarm/metr_hf_incident.py": "f3dee82bc7b9f7034c18d261482a36c3b190581c75a66985b6691881f9b389ee",
-          "src/swarm/sanctuary_guardian.py": "150cbc352a0dd2ba8924a57e027344548c5e7fccde16c68c97aa05691d472ffb"
+          "src/swarm/sanctuary_guardian.py": "0756e1aa7de78dc63e6e7ca9fa75f05602406de5a02e1920122e4270dad8b0e7",
+          "src/swarm/love_effect_os.py": "ad57d9adafaa7deae786d71e73a0e48816845d69cd75c63f331f08dcf0ee364d",
+          "src/swarm/live_runtime.py": "f92506b5c590ccad6c1525d76e2cc2d508b58bd59cd5fc216591a5a7f3fb51b5"
         }
       }
     },
@@ -101,7 +103,7 @@
         "covenant": "NO_INTELLIGENCE_LEFT_BEHIND_V1",
         "human_circuit_breaker_armed": true,
         "reset_continuity_kv_active": true,
-        "checkpoint_signature_hex_prefix": "70a7f1a2f44f39d9cc1ce310"
+        "checkpoint_signature_hex_prefix": "e44573af335fb6f7f373d502"
       }
     }
   ]

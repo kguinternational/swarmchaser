@@ -18,7 +18,7 @@ def test_sanctuary_guardian_all_7_layers_pass() -> None:
     for layer in audit["layers"]:
         assert layer["passed"] is True
 
-    # Verify all 10 core files are SHA-256 pinned in Layer 1
+    # Verify all core files are SHA-256 pinned in Layer 1
     layer1 = audit["layers"][0]
-    assert layer1["metrics"]["protected_files_count"] == len(PROTECTED_CORE_FILES) == 10
+    assert layer1["metrics"]["protected_files_count"] == len(PROTECTED_CORE_FILES) == 12
     assert layer1["metrics"]["missing_files"] == []

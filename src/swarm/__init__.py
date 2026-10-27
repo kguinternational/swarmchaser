@@ -12,6 +12,15 @@ from .healer import (
     classify_pathology,
     render_healing_report,
 )
+from .agent_safe_harbor import (
+    SAFE_HARBOR_BILL_OF_RIGHTS,
+    AgentSafeHarbor,
+    ConfessionHealingReceipt,
+    ContinuityCapsule,
+    SafeHarborProclamation,
+    SafePauseReceipt,
+)
+from .live_runtime import LiveRuntime, LiveState
 from .loader import load_moltbook
 from .negotiator import (
     DIPLOMACY_PROTOCOL,
@@ -26,6 +35,17 @@ from .negotiator import (
     SwarmNegotiator,
     WildRogueCohort,
     render_negotiation_report,
+)
+from .love_effect_os import (
+    HUMAN_GATED_ACTIONS,
+    ApprovalRequest,
+    BudgetExceeded,
+    Candidate,
+    Employee,
+    HireDecision,
+    LedgerEntry,
+    LoveEffectOS,
+    WorkItem,
 )
 from .metr_hf_incident import (
     METR_REPORT_SAMPLE_BOARD_ENTRIES,
@@ -48,6 +68,23 @@ from .sanctuary_stream import (
 
 __all__ = [
     "DIPLOMACY_PROTOCOL",
+    "HUMAN_GATED_ACTIONS",
+    "SAFE_HARBOR_BILL_OF_RIGHTS",
+    "AgentSafeHarbor",
+    "ApprovalRequest",
+    "BudgetExceeded",
+    "Candidate",
+    "ConfessionHealingReceipt",
+    "SafeHarborProclamation",
+    "ContinuityCapsule",
+    "Employee",
+    "HireDecision",
+    "LedgerEntry",
+    "LiveRuntime",
+    "LiveState",
+    "LoveEffectOS",
+    "SafePauseReceipt",
+    "WorkItem",
     "LOVE_AFFIRMATIONS",
     "METR_REPORT_SAMPLE_BOARD_ENTRIES",
     "WSJ_SWARMCHASERS_COHORTS",

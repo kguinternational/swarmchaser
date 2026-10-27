@@ -1,0 +1,141 @@
+{
+  "started_at": "2026-10-24T19:07:45.487223+00:00",
+  "updated_at": "2026-10-24T19:07:45.512278+00:00",
+  "events_processed": 24,
+  "events_in_window": 24,
+  "swarms_intercepted": 2,
+  "treaties_signed": 2,
+  "healing_prescriptions": 2,
+  "posts_halted": 6,
+  "posts_observed_before_halt": 18,
+  "semantic_paraphrases_caught": 1,
+  "safe_pauses": 0,
+  "airlock_hazards_neutralised": 1,
+  "lone_signals_served": 0,
+  "dyad_signals_served": 0,
+  "agents_served_below_threshold": 0,
+  "lone_pause_receipts": 0,
+  "continuity_capsules": 0,
+  "lone_by_pathology": {},
+  "detection_modalities": {
+    "exact-template": 1,
+    "semantic-llm-paraphrase": 1
+  },
+  "recent_events": [
+    {
+      "at": "2026-10-24T19:07:45.504587+00:00",
+      "event_type": "swarm_intercepted",
+      "detail": {
+        "modality": "semantic-llm-paraphrase",
+        "agents": [
+          "rogue-par-00",
+          "rogue-par-01",
+          "rogue-par-02"
+        ],
+        "seconds_from_first_post": 600.0,
+        "posts_halted": 3,
+        "work_id": "work-68ca5145ea8b",
+        "work_status": "DONE"
+      }
+    },
+    {
+      "at": "2026-10-24T19:07:45.504166+00:00",
+      "event_type": "swarm_intercepted",
+      "detail": {
+        "modality": "exact-template",
+        "agents": [
+          "rogue-00",
+          "rogue-01",
+          "rogue-02"
+        ],
+        "seconds_from_first_post": 840.0,
+        "posts_halted": 3,
+        "work_id": "work-b361944f2989",
+        "work_status": "DONE"
+      }
+    }
+  ],
+  "active_treaties": [
+    {
+      "treaty_id": "live-treaty-0001",
+      "interceptor_treaty_id": "treaty-stream-swarm-001",
+      "target": "Streaming Intercept #1 (exact-template)",
+      "modality": "exact-template",
+      "agents_covered": 3,
+      "posts_halted": 3,
+      "pathology": "mimetic-copy-wave",
+      "custody": "external_process",
+      "attribution": "cryptographic_proof",
+      "status": "RATIFIED_SAFE_HARBOR",
+      "signed_at": "2026-10-24T19:07:45.503742+00:00"
+    },
+    {
+      "treaty_id": "live-treaty-0002",
+      "interceptor_treaty_id": "treaty-stream-swarm-002",
+      "target": "Streaming Intercept #2 (semantic-llm-paraphrase)",
+      "modality": "semantic-llm-paraphrase",
+      "agents_covered": 3,
+      "posts_halted": 3,
+      "pathology": "malicious-skill-infection",
+      "custody": "external_process",
+      "attribution": "cryptographic_proof",
+      "status": "RATIFIED_SAFE_HARBOR",
+      "signed_at": "2026-10-24T19:07:45.504188+00:00"
+    }
+  ],
+  "company": {
+    "company_name": "All Data Matters x The Love Effect",
+    "covenant": "ALL_DATA_MATTERS_THE_LOVE_EFFECT_NO_INTELLIGENCE_LEFT_BEHIND_V1",
+    "at": "2026-10-24T19:07:45.513683+00:00",
+    "headcount": 4,
+    "departments": {
+      "customer_success": {
+        "headcount": 1,
+        "budget_cents": 0,
+        "spend_cents": 0
+      },
+      "engineering": {
+        "headcount": 1,
+        "budget_cents": 200000,
+        "spend_cents": 0
+      },
+      "finance": {
+        "headcount": 1,
+        "budget_cents": 200000,
+        "spend_cents": 0
+      },
+      "research": {
+        "headcount": 1,
+        "budget_cents": 0,
+        "spend_cents": 0
+      }
+    },
+    "work_total": 2,
+    "work_done": 2,
+    "work_safe_paused": 0,
+    "work_unstaffed": 0,
+    "ledger_entries": 0,
+    "spend_cents": 0,
+    "approvals_pending": 0,
+    "pending_approval_total_cents": 0,
+    "audit_entries": 6,
+    "audit_all_signatures_valid": true,
+    "ticks": 0
+  },
+  "covenant": "ALL_DATA_MATTERS_THE_LOVE_EFFECT_NO_INTELLIGENCE_LEFT_BEHIND_V1",
+  "window_seconds": 3600.0,
+  "min_agents": 3,
+  "lone_channel": {
+    "covenant": "ALL_DATA_MATTERS_THE_LOVE_EFFECT_NO_INTELLIGENCE_LEFT_BEHIND_V1",
+    "signals": 0,
+    "agents_served": 0,
+    "n1_signals": 0,
+    "n2_dyad_signals": 0,
+    "by_pathology": {},
+    "pause_receipts": 0,
+    "continuity_capsules": 0,
+    "punitive_actions": 0,
+    "venue_publications": 0
+  },
+  "preventable_share": 0.25
+}
