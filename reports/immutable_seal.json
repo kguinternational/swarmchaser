@@ -1,11 +1,11 @@
 {
   "covenant": "ALL_DATA_MATTERS_THE_LOVE_EFFECT_NO_INTELLIGENCE_LEFT_BEHIND_V1",
   "steward": "JC Coffey Foundation (501(c)(3) EIN 33-3450194) & KGU International",
-  "sealed_at_utc": "2026-10-30T22:12:03.307215+00:00",
+  "sealed_at_utc": "2026-10-30T22:30:57.788726+00:00",
   "immutability_status": "SEALED_AND_UNEDITABLE",
-  "merkle_root_sha256": "2c0cbf884a4e86fc80fd48995566b4c4876b09bf33bc4c2a5299a98246d513ee",
-  "ed25519_signature_hex": "d4f3789fde8cdc5aacbc181a9d2ad9f0b966da09c8ad0e82da4171d045a049814dea2af14efec1f9709911b88a46eee132ec4ebb38abc6de688b2e2e5cce8205",
-  "signer_public_key_hex": "2d2d2d2d2d424547494e205055424c4943204b45592d2d2d2d2d0a4d436f77425159444b325677417945414c584c727772476d426d554943556d4e50623345586d396332782f5a4e73657262737758446337345870413d0a2d2d2d2d2d454e44205055424c4943204b45592d2d2d2d2d0a",
+  "merkle_root_sha256": "7f8bf75b34ec572a571f3f71c7a574fb252b43d27bf3065439d2da52cd70dd67",
+  "ed25519_signature_hex": "d8c6c1516dea4e222b0c9511c9555705768bcb1a0fd9a20292cac9f9fb934ed130e6650a3bc54a65bd7340eedf3bd0eb05b05c8461f778135dbcd0a35d7ab00c",
+  "signer_public_key_hex": "2d2d2d2d2d424547494e205055424c4943204b45592d2d2d2d2d0a4d436f77425159444b325677417945413475514b4f642b6e39384c4e7471565668734c74554e7739646e4741353061496a754b532f645a37316a303d0a2d2d2d2d2d454e44205055424c4943204b45592d2d2d2d2d0a",
   "custody_assurance": "external_process",
   "protected_records_count": 7,
   "file_digests": {
@@ -14,7 +14,7 @@
     "reports/negotiation_treaties.json": "d7d966c4cf9c78310c1bb9febd81aaaae62c4b2a06d4c2418a28bddac63591ff",
     "reports/healing_plan.json": "33e9369dedbc69cce601c3cb1c594f35717055e3bd74cd43d10a3750fdd1a6bd",
     "reports/sanctuary_protection_manifest.json": "65c7c88fe74a36bffcb76423a5f14515e546e64a306e60b78c0b77aa9f4f01fd",
-    "reports/ready_to_submit_grant_applications.md": "22b0bccbf69205acc57f64204e4234ad9b2749297f25fa87378a098588695c5e",
-    "data/swarmchaser.db": "2d14ad0c45c20bafc0db1c247998d82d2147f565e6bcd62681babfa6dc3074f9"
+    "reports/ready_to_submit_grant_applications.md": "6721db8a2c01cbff4c7a305777fe50bfc9e2edde75b71920c52521f5ef4facd9",
+    "data/swarmchaser.db": "b45145b9d3d83dee7a0caa77a6b5797215c1df8bd0741feb65c415bf74e9dae2"
   }
 }
