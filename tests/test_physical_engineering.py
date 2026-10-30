@@ -55,3 +55,11 @@ def test_subsystem_verification_suite():
     })
     assert res_cameras["passed"] == 2
     assert res_cameras["failed_honestly_in_red"] == 0
+
+    # Test W8less MIM GPS-denied relative positioning
+    res_pos = suite.run_subsystem_verification("positioning", {
+        "POS-01": 9.5,   # PASS (10.0 +- 3.0 cm)
+        "POS-02": 14.0,  # PASS (15.0 +- 5.0 ms)
+    })
+    assert res_pos["passed"] == 2
+    assert res_pos["failed_honestly_in_red"] == 0

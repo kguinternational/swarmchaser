@@ -217,6 +217,23 @@ class PhysicalEngineeringSuite:
         ))
         self.subsystems["cameras"] = argus
 
+        # 7. W8less / MIM: GPS-Denied Peer-to-Peer Relative Localization
+        w8less = PhysicalSubsystemSpec(
+            subsystem_id="mim-w8less-v1",
+            name="W8less Motion Intelligence Model (MIM) GPS-Denied P2P Ranging",
+            lead_expert="Zephyr",
+            toolchain=["C", "Python", "ROS2", "KiCad"],
+        )
+        w8less.add_requirement(EngineeringRequirement(
+            req_id="POS-01", subsystem="relative_ranging", parameter="gps_denied_accuracy_cm",
+            target_value=10.0, tolerance=3.0, unit="cm"
+        ))
+        w8less.add_requirement(EngineeringRequirement(
+            req_id="POS-02", subsystem="ranging_latency", parameter="ranging_packet_latency_ms",
+            target_value=15.0, tolerance=5.0, unit="ms"
+        ))
+        self.subsystems["positioning"] = w8less
+
     def run_subsystem_verification(self, subsystem_key: str, measurements: Dict[str, float]) -> Dict[str, Any]:
         sub = self.subsystems.get(subsystem_key)
         if not sub:
