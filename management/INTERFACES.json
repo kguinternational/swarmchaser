@@ -1,0 +1,38 @@
+{
+  "system": "Emergency Preparedness & Self-Sustainability Physical Demonstrator",
+  "version": "1.0.0",
+  "interfaces": [
+    {
+      "interface_id": "IF-ROB-CAM",
+      "source_subsystem": "Titan (OpenBot)",
+      "target_subsystem": "Argus (Cameras)",
+      "physical_spec": "M3 vibration-damped bracket mount",
+      "data_spec": "USB 3.0 Type-C / MIPI-CSI2 1080p @ 30 FPS",
+      "electrical_spec": "5V 2.5A regulated rail from main 12V battery"
+    },
+    {
+      "interface_id": "IF-UAV-W8LESS",
+      "source_subsystem": "Zephyr (Drones)",
+      "target_subsystem": "W8less MIM (Positioning)",
+      "physical_spec": "SMA antenna mount on carbon fiber boom",
+      "data_spec": "UART / CAN bus telemetry @ 115200 baud to Pixhawk",
+      "electrical_spec": "3.3V / 5V DC low-noise supply"
+    },
+    {
+      "interface_id": "IF-AQUA-SOLAR",
+      "source_subsystem": "Aqua (Water Reactor)",
+      "target_subsystem": "Helios (Solar Microgrid)",
+      "physical_spec": "Anderson Powerpole 45A quick-disconnect connector",
+      "data_spec": "RS485 Modbus RTU telemetry to central logger",
+      "electrical_spec": "24V/48V DC submersible brushless pump circuit"
+    },
+    {
+      "interface_id": "IF-COMPUTE-FABRIC",
+      "source_subsystem": "Apple Mac Studio Fabric",
+      "target_subsystem": "NVIDIA GPU Workstation",
+      "physical_spec": "Cat6A / SFP+ 10GbE outdoor UV cabling",
+      "data_spec": "TCP/IP zero-egress gRPC streaming on local subnet 10.0.0.0/24",
+      "electrical_spec": "Pure sine wave 120V AC from Helios solar hybrid inverter"
+    }
+  ]
+}

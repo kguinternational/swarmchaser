@@ -1,0 +1,38 @@
+{
+  "project": "Swarmchaser Emergency Prep & Self-Sustainability Demonstrator",
+  "covenant": "ALL_DATA_MATTERS_THE_LOVE_EFFECT_NO_INTELLIGENCE_LEFT_BEHIND_V1",
+  "methodology": "203x Uplink AI Engineering Protocol",
+  "metrics": {
+    "total_unit_tests": 197,
+    "tests_passed": 197,
+    "forensic_rows_indexed": 189579,
+    "moltbook_posts_indexed": 838000,
+    "sqlite_database_size_bytes": 1073741824,
+    "tracked_grant_pipeline_usd": 1558095.0,
+    "exo_cluster_nodes": 5,
+    "hardware_specs": {
+      "pooled_unified_ram_gb": 512,
+      "nvidia_gpu_vram_gb": 48,
+      "student_mac_minis": 10,
+      "autonomous_drones": 4,
+      "edge_jetson_orin_modules": 5,
+      "gps_denied_relative_accuracy_cm": 10.0,
+      "starlink_nodes": 1,
+      "solar_mesh_wifi_aps": 6
+    },
+    "subsystem_verification": {
+      "robotics_titan": "VERIFIED_WITH_HONEST_FAIL_IN_RED",
+      "water_aqua": "PASS",
+      "gardens_demeter": "PASS",
+      "energy_helios": "PASS",
+      "drones_zephyr": "PASS",
+      "cameras_argus": "PASS",
+      "positioning_w8less": "PASS"
+    }
+  },
+  "merkle_seal": {
+    "root_sha256": "7f8bf75b34ec572a571f3f71c7a574fb252b43d27bf3065439d2da52cd70dd67",
+    "signing_algorithm": "Ed25519",
+    "custody_assurance": "external_process"
+  }
+}
