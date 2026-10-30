@@ -24,34 +24,29 @@
 ---
 
 ### Field 2: Project Title
-`Autonomous Engineering Manager & 4-Subagent STEM Demonstrator: Youth OpenBot Robotics & Community Mesh Wi-Fi Lab`
+`Emergency Preparedness & Self-Sustainability Lab: Youth Robotics, Autonomous Drones & Community Mesh Wi-Fi`
 
 ---
 
 ### Field 3: Project Summary (150 Words)
-The JC Coffey Foundation (`501(c)(3) EIN 33-3450194`), operating under our founding covenant *No Human Left Behind*, delivers digital equity, open-source robotics, and ecological resilience in partnership with KGU International. 
+The JC Coffey Foundation (`501(c)(3) EIN 33-3450194`), operating under our founding covenant *No Human Left Behind*, delivers digital equity, emergency preparedness, and ecological resilience in partnership with KGU International. 
 
-This project implements our breakthrough **Autonomous Engineering Manager & 4-Subagent Digital Demonstrator** to empower under-resourced North Carolina youth as Engineering Directors. Students supervise four specialized open-source AI subagents (`CAD/FEM`, `CFD Aerodynamics`, `Circuit/Firmware`, and `Blender Assembly`) to design, 3D print, and assemble physical **OpenBot agricultural rovers** and **solar-assisted mesh Wi-Fi field nodes**.
+This project trains historically under-resourced North Carolina youth in practical **Emergency Preparedness and Self-Sustainability**. Students learn to direct an **Autonomous Engineering Manager & 4-Subagent Digital Pipeline** (`CAD/FEM`, `CFD Aerodynamics`, `Circuit/Firmware`, and `Blender Assembly`) to design, assemble, and program physical **OpenBot ground rovers**, **autonomous aerial inspection drones**, **emergency camera sensors**, and **solar-powered mesh Wi-Fi nodes**.
 
-Walmart Spark Good funding will directly acquire an Apple Silicon / Mac Studio master compiling workstation, outdoor weather-sealed Wi-Fi node hardware, solar power batteries, and OpenBot robot kits—giving local youth free access to cutting-edge engineering tools and connecting families through community mesh internet.
+Walmart Spark Good funding will directly acquire an Apple Silicon / Mac Studio master compiling workstation, drone airframe components, emergency camera sensors, weather-sealed Wi-Fi node hardware, and solar batteries—giving local youth free access to cutting-edge emergency technology while connecting rural families through community mesh internet.
 
 ---
 
 ### Field 4: Community Need & Target Population (250 Words)
-Under-resourced youth and rural families in our North Carolina service area face a double divide: lack of dependable broadband connectivity at home and limited access to modern digital fabrication and computing hardware. Most disadvantaged students are exposed to technology only as passive consumers rather than active creators and directors of physical engineering systems.
+Under-resourced youth and rural families in our North Carolina service area face a double divide: lack of dependable broadband connectivity at home and high vulnerability to severe storms, hurricanes, and grid blackouts. Disadvantaged students are rarely given the tools or training to respond effectively to these emergencies.
 
-Furthermore, severe weather disruptions frequently knock out local power and internet, leaving vulnerable households isolated from schoolwork and emergency services. 
+Through the **KGU Youth Resilience Scholarship program (30% statutory allocation)**, we eliminate financial barriers by providing 100% tuition-free STEM and disaster resilience workshops. Students learn how to build, maintain, and operate self-sustaining emergency systems:
+1. **Autonomous Aerial Drones & Cameras:** Aerial damage inspection, flood monitoring, and search-and-rescue camera feeds.
+2. **Ground Rovers & Sensors:** OpenBot physical rovers for hazardous terrain reconnaissance and soil/water sampling.
+3. **Off-Grid Power & Mesh Communications:** Solar-powered LiFePO4 battery banks and outdoor Wi-Fi access points keeping families connected when the power grid goes down.
+4. **Autonomous AI Engineering:** Directing local AI subagents in FreeCAD, OpenFOAM, KiCad, and Blender to 3D print replacement parts on demand.
 
-Through the **KGU Youth Resilience Scholarship program (30% statutory allocation)**, we eliminate financial barriers by providing 100% tuition-free STEM workshops. Students learn the complete modern engineering workflow:
-1. **The Autonomous Engineering Manager:** Students issue high-level instructions to an AI manager.
-2. **Four Specialized Subagents:**
-   - Subagent 1 models rover chassis and suspension in FreeCAD.
-   - Subagent 2 simulates fluid dynamics and air intake in OpenFOAM.
-   - Subagent 3 designs motor controller circuits in KiCad and LTSpice.
-   - Subagent 4 verifies exploded assembly in Blender.
-3. **Physical Translation:** Students take the verified CAD models, 3D print them, solder the electronics, and deploy real working rovers and solar Wi-Fi nodes.
-
-This project bridges both physical and digital isolation, preparing students for high-demand engineering careers while providing free community mesh connectivity.
+This initiative transforms vulnerable youth from passive bystanders into skilled community stewards capable of safeguarding their neighborhoods during crises.
 
 ---
 

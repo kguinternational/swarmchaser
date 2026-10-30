@@ -95,6 +95,36 @@ GRANT_PIPELINE = [
         "status": "READY_TO_SUBMIT",
         "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)",
     },
+    {
+        "id": "microcenter-equipment",
+        "name": "Micro Center — 512GB AI Lab, NVIDIA GPU, Drones & Starlink Grant",
+        "deadline": "Rolling (Contact: smiller1@microcenter.com)",
+        "amount_usd": 43095,
+        "urgency": "HIGH",
+        "portal": "Email outreach: smiller1@microcenter.com",
+        "status": "READY_TO_SUBMIT",
+        "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)",
+    },
+    {
+        "id": "nvidia-hardware-grant",
+        "name": "NVIDIA — Applied Research & Edge AI Hardware Grant (Workstation + Jetsons)",
+        "deadline": "Rolling / Academic Cycle",
+        "amount_usd": 30000,
+        "urgency": "HIGH",
+        "portal": "https://www.nvidia.com/en-us/research/applied-research-accelerator-program/",
+        "status": "READY_TO_SUBMIT",
+        "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)",
+    },
+    {
+        "id": "walmart-spark-good",
+        "name": "Walmart Spark Good — Local Community Grant (Cycle 3)",
+        "deadline": "2026-11-30",
+        "amount_usd": 5000,
+        "urgency": "HIGH",
+        "portal": "https://www.walmart.com/nonprofits",
+        "status": "READY_TO_SUBMIT",
+        "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)",
+    },
 ]
 
 

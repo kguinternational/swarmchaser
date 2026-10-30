@@ -1,9 +1,10 @@
 # Equipment & Physical Infrastructure Grant Addendum (Budget Justification)
+## Youth Emergency Preparedness, Disaster Resilience & Self-Sustainability Laboratory
 
 **Applicant Organization:** **JC Coffey Foundation** (`501(c)(3) EIN 33-3450194`)  
-**Technology & Research Partner:** **KGU International**  
-**Initiative:** The Love Effect OS Physical Fabrication, Water Remediation & Autonomous Robotics Lab  
-**Statutory Allocation:** 70% Direct Physical Remediation Pool / 30% Youth Resilience Scholarships  
+**Technology & Research Partner:** **KGU International** (`github.com/kguinternational/swarmchaser`)  
+**Initiative:** The Love Effect OS Physical Fabrication, Emergency Preparedness, Water Remediation & Autonomous Robotics Lab  
+**Statutory Allocation:** 70% Direct Physical Remediation & Equipment Pool / 30% Youth Resilience Scholarships  
 
 ---
 
@@ -14,49 +15,65 @@ This budget schedule is drop-in ready to attach to our upcoming grant submission
 - **Amazon Science Research Awards** ($80k cash + $40k AWS — Deadline: Nov 4, 2026)
 - **Long-Term Future Fund (LTFF)** ($120,000 — Rolling)
 - **Survival and Flourishing Fund (SFF)** ($250,000 — Rolling)
-
-### Category A: Digital Fabrication & OpenBot Robotics ($42,500)
-| Item Description | Qty | Unit Cost | Total Cost | Purpose & Scientific Justification |
-|:---|:---:|---:|---:|:---|
-| **Industrial Multi-Material 3D Printers (Bambu Lab P1S/X1C with AMS)** | 4 | $1,500 | $6,000 | Rapid on-premise additive manufacturing of OpenBot chassis, suspension mounts, and sensor brackets. |
-| **High-Temp Enclosed Large-Format 3D Printer (Nylon/Carbon Fiber)** | 1 | $4,500 | $4,500 | Heavy-duty continuous rover components, drive gears, and weather-sealed motor housings. |
-| **Engineering Filaments (PETG, ASA, Carbon Fiber Nylon, TPU)** | 150 kg | $30 | $4,500 | UV-resistant, impact-resistant, and chemically stable materials for outdoor field rovers. |
-| **OpenBot Hardware Kits (Motors, ESP32, Drivers, Wheels, Screws)** | 25 | $300 | $7,500 | Educational robotics fleet for physical soil inspection and micro-drip inspection. |
-| **Edge Compute AI Accelerators (NVIDIA Jetson Orin Nano / Raspberry Pi 5)** | 20 | $500 | $10,000 | Onboard computer vision and local obstacle avoidance running zero-egress models. |
-| **Sensory Suite (LiDAR scanners, Depth Cameras, Optical Flow)** | 10 | $1,000 | $10,000 | Millimeter-accurate agricultural navigation and elevation mapping for garden beds. |
+- **National Science Foundation (NSF) STEM / Disaster Resilience Grants**
 
 ---
 
-### Category B: Water Remediation & Hydrology Pilot ($38,000)
+### Category A: Autonomous Robotics, Drones & Emergency Vision ($48,500)
 | Item Description | Qty | Unit Cost | Total Cost | Purpose & Scientific Justification |
 |:---|:---:|---:|---:|:---|
-| **Gravity-Fed Multi-Stage Biochar & Zeolite Reactor Vessels** | 3 | $3,500 | $10,500 | Removal of heavy metals, PFAS, and micro-contaminants from rural and agricultural runoff. |
-| **High-Volume DC Solar Water Pumps & Pressure Boosters** | 6 | $650 | $3,900 | Zero-grid water movement powered directly by off-grid solar microgrids. |
-| **Multiparameter Water Quality Sensor Array (pH, Turbidity, TDS, ORP)** | 8 | $1,200 | $9,600 | Real-time continuous telemetry logging to SQLite warehouse via Ed25519 attestations. |
-| **Filtration Media (Activated Biochar, KDF-55, Fine Quartz, Activated Alumina)** | Bulk | $6,000 | $6,000 | Replaceable media beds tested across 100,000-gallon treatment cycles. |
-| **Digital Laboratory Spectrophotometer & Calibration Standards** | 1 | $8,000 | $8,000 | On-site independent verification of contaminant reduction without 3-week lab delays. |
+| **Autonomous Aerial Drone Airframes & Pixhawk Kits** | 4 | $750 | $3,000 | Quadcopters for post-disaster flood mapping, search & rescue, and aerial mesh relays. |
+| **Emergency Thermal FLIR Infrared Cameras (Boson/Vue)** | 2 | $1,500 | $3,000 | Rapid thermal detection of stranded persons and electrical fire hotspots during emergencies. |
+| **Multispectral & Stereo 3D Depth Cameras (OAK-D / 4K)** | 6 | $400 | $2,400 | Spatial AI for real-time obstacle avoidance on rovers/drones and aerial crop/flood assessment. |
+| **Edge AI Companion Modules (NVIDIA Jetson Orin Nano)** | 10 | $500 | $5,000 | Zero-cloud, onboard real-time neural vision and obstacle navigation running at 40 TOPS. |
+| **Industrial Multi-Material 3D Printers (Bambu Lab P1S/X1C)** | 4 | $1,500 | $6,000 | On-premise rapid additive fabrication of drone arms, rover chassis, and sensor brackets. |
+| **High-Temp Enclosed 3D Printer (Nylon/Carbon Fiber)** | 1 | $4,500 | $4,500 | Heavy-duty continuous structural components for weather-sealed rovers and aerial airframes. |
+| **Engineering Filaments (PETG, ASA, Carbon Fiber Nylon, TPU)** | 150 kg | $30 | $4,500 | UV-resistant, impact-resistant, and chemically stable materials for outdoor field operations. |
+| **OpenBot Ground Rover Hardware Kits (Motors, ESP32, Drivers)** | 20 | $300 | $6,000 | Physical robotics fleet for agricultural soil sampling and hazardous zone reconnaissance. |
+| **Sensory Suite (LiDAR Scanners, Sonar, Optical Flow)** | 8 | $1,000 | $8,000 | Millimeter-accurate indoor/outdoor mapping and autonomous navigation under canopy/GPS denial. |
+| **Handheld RF & Drone Field Calibration Tools** | Lot | $6,100 | $6,100 | Spectrum analyzers, propeller balancers, battery charging stations, and safety cages. |
 
 ---
 
-### Category C: Regenerative Agriculture & Autonomous Gardens ($34,500)
+### Category B: Clean Water Remediation & Hydrology Pilot ($32,000)
 | Item Description | Qty | Unit Cost | Total Cost | Purpose & Scientific Justification |
 |:---|:---:|---:|---:|:---|
-| **Automated Solenoid Drip Irrigation Manifolds & Pressure Regulators** | 12 | $450 | $5,400 | Automated micro-dosing water delivery based on local sensor feedback. |
-| **Soil Microbiology & Moisture IoT Sensor Probes (LoRaWAN)** | 30 | $150 | $4,500 | Deep-root moisture, electrical conductivity, and temperature profiling. |
-| **Organic Soil Amendments, Worm Castings & Heirloom Seed Bank** | Lot | $6,600 | $6,600 | Biodiversity foundation for food sovereignty and pollinator sanctuary corridors. |
-| **Modular High-Tunnel Greenhouse & Automated Louver Ventilation** | 2 | $9,000 | $18,000 | Year-round controlled microclimate for food production and testing rovers. |
+| **Gravity-Fed Multi-Stage Biochar & Zeolite Reactor Vessels** | 3 | $3,500 | $10,500 | Removal of heavy metals, PFAS, micro-plastics, and pathogens from rural flood runoff. |
+| **High-Volume DC Solar Water Pumps & Boosters** | 6 | $650 | $3,900 | Zero-grid water movement powered directly by off-grid solar microgrids. |
+| **Multiparameter Water Quality Sensor Array (pH, Turbidity, TDS, ORP)** | 8 | $1,200 | $9,600 | Real-time continuous telemetry logging to local SQLite warehouse via Ed25519 attestations. |
+| **Filtration Media (Activated Biochar, KDF-55, Fine Quartz)** | Bulk | $4,000 | $4,000 | Replaceable media beds tested across 100,000-gallon treatment cycles. |
+| **Digital Laboratory Spectrophotometer & Calibration Standards** | 1 | $4,000 | $4,000 | On-site independent verification of contaminant reduction without multi-week lab delays. |
 
 ---
 
-### Category D: Off-Grid Renewable Solar Microgrid ($35,000)
+### Category C: Regenerative Agriculture & Food Sovereignty ($28,500)
 | Item Description | Qty | Unit Cost | Total Cost | Purpose & Scientific Justification |
 |:---|:---:|---:|---:|:---|
-| **High-Efficiency Monocrystalline Solar PV Panels (400W–500W)** | 24 | $300 | $7,200 | 10kW peak solar array powering fabrication, pumps, and computing cluster. |
+| **Automated Solenoid Drip Irrigation Manifolds & Regulators** | 12 | $450 | $5,400 | Automated micro-dosing water delivery based on local sensor feedback and moisture telemetry. |
+| **Soil Microbiology & Moisture IoT Sensor Probes (LoRaWAN)** | 30 | $150 | $4,500 | Deep-root moisture, electrical conductivity, and temperature profiling for micro-farms. |
+| **Organic Soil Amendments, Worm Castings & Heirloom Seed Bank** | Lot | $4,600 | $4,600 | Biodiversity foundation for food sovereignty and pollinator sanctuary corridors. |
+| **Modular High-Tunnel Greenhouse & Automated Ventilation** | 2 | $7,000 | $14,000 | Year-round controlled microclimate for food production and drone/rover testing. |
+
+---
+
+### Category D: Off-Grid Renewable Solar Microgrid & Emergency Power ($25,000)
+| Item Description | Qty | Unit Cost | Total Cost | Purpose & Scientific Justification |
+|:---|:---:|---:|---:|:---|
+| **High-Efficiency Monocrystalline Solar PV Panels (400W–500W)** | 20 | $300 | $6,000 | 8kW peak solar array powering fabrication, water pumps, drone charging, and computing cluster. |
 | **Server-Rack LiFePO4 Battery Banks (48V 100Ah / 5.12kWh each)** | 4 | $1,800 | $7,200 | 20kWh deep-cycle energy storage ensuring continuous 24/7/365 off-grid operation. |
-| **Hybrid Solar Inverters & MPPT Charge Controllers (12kW Split-Phase)** | 2 | $2,800 | $5,600 | Pure sine-wave AC power conversion for sensitive 3D printers and EXO cluster nodes. |
-| **Ground-Mount Racking, Lightning Protection & DC Disconnect Gear** | Lot | $5,000 | $5,000 | Hurricane-rated physical installation meeting NEC code compliance. |
-| **Emergency Backup Dual-Fuel Generator (Solar Hybrid Assist)** | 1 | $3,000 | $3,000 | Failsafe power assurance during extreme multi-day weather events. |
-| **Electrical Safety Gear, 4/0 Copper Wiring & Conduit** | Lot | $7,000 | $7,000 | FIPS and NFPA compliant physical balance-of-system deployment. |
+| **Hybrid Solar Inverters & MPPT Charge Controllers (10kW Split-Phase)** | 2 | $2,500 | $5,000 | Pure sine-wave AC power conversion for sensitive 3D printers and compute nodes. |
+| **Ground-Mount Racking, Lightning Protection & DC Disconnect Gear** | Lot | $3,800 | $3,800 | Hurricane-rated physical installation meeting NEC code compliance. |
+| **Electrical Safety Gear, 4/0 Copper Wiring & Weatherproof Conduit** | Lot | $3,000 | $3,000 | FIPS and NFPA compliant physical balance-of-system deployment. |
+
+---
+
+### Category E: Sovereign On-Premise AI Supercompute & Mesh Hub ($16,000)
+| Item Description | Qty | Unit Cost | Total Cost | Purpose & Scientific Justification |
+|:---|:---:|---:|---:|:---|
+| **High-Performance NVIDIA CUDA GPU AI Workstation** | 1 | $6,499 | $6,499 | Dual NVIDIA RTX 4090 (48GB VRAM) / RTX 6000 Ada: Real-time computer vision processing of drone video feeds, PyTorch training, and OptiX synthetic disaster simulation. |
+| **High-Memory Unified Host Node (Apple Silicon)** | 1 | $4,999 | $4,999 | High-memory node hosting local 70B–405B foundational reasoning models, offline survival databases, and large-scale CFD meshing. |
+| **Starlink High-Performance Satellite Kit & Mounting** | 1 | $1,999 | $1,999 | Emergency off-grid satellite uplink providing hurricane-resilient internet when ground fiber fails. |
+| **Long-Range Outdoor Mesh Wi-Fi & 10GbE Switch Infrastructure** | Lot | $2,503 | $2,503 | 6x Ubiquiti UniFi outdoor access points, 10GbE backbone switch, and outdoor UV cabling. |
 
 ---
 

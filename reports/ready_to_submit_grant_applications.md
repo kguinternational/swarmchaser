@@ -126,3 +126,42 @@ Every grant proposal below demonstrates our breakthrough autonomous engineering 
 - **Requested Amount:** **$250,000 Grant (or $500,000 `1.5% PRI Loan` under IRC § 4944(c))**
 - **Proposal Core:**
   > Integrates the **Engineering Manager & 4-Subagent Digital Demonstrator** directly into community STEM education. Through the KGU Youth Resilience Scholarship program (30% statutory allocation), under-resourced North Carolina youth are trained as autonomous engineering directors—supervising AI subagents in 3D printing OpenBot rovers, deploying clean water biochar reactors, and establishing solar-assisted community Wi-Fi nodes.
+
+---
+
+## GRANT #6: Micro Center — 512GB AI Lab, NVIDIA CUDA Workstation, Drones & Starlink Grant
+- **Funder Contact:** `smiller1@microcenter.com` (Micro Center Community Outreach & Corporate Grants)
+- **Store Location:** 4744 South Blvd, Charlotte, NC 28217
+- **Requested Value:** **$43,095.00** (Itemized Equipment Grant / In-Kind Hardware Donation)
+- **Tax-Exempt Recipient:** **JC Coffey Foundation (`501(c)(3) EIN 33-3450194`)**
+- **Hardware Profile:**
+  - 512GB Pooled Unified Memory Apple Silicon Fabric (2× Mac Studio Ultra via EXO P2P memory bridge)
+  - NVIDIA CUDA GPU Workstation (Dual RTX 4090 24GB or RTX 6000 Ada 48GB VRAM)
+  - 10× Apple Silicon Mac Minis (Student STEM engineering pods)
+  - Autonomous Aerial Drone Fleet (4× PX4 Autopilot Quadcopters)
+  - Emergency Sensor Suite (FLIR Thermal Infrared + OAK-D Spatial AI 3D Depth + 4K Weatherproof Cameras)
+  - 5× NVIDIA Jetson Orin Nano (8GB) Edge AI companion computers
+  - Starlink High-Performance Satellite Kit + 6× Outdoor Long-Range Mesh Wi-Fi APs + LiFePO4 Solar Batteries
+- **Mission:** Teaching historically underserved rural North Carolina youth emergency preparedness, disaster resilience, and off-grid technological self-sustainability.
+- **Full Dossier:** See [`reports/applications/04_microcenter_smiller_mac_starlink_grant.md`](file:///Users/lds1830/OpenBot/Agents/agent-c250123e-3e57-4806-ab12-4eb3acc0625f/swarmchaser/reports/applications/04_microcenter_smiller_mac_starlink_grant.md).
+
+---
+
+## GRANT #7: NVIDIA — Applied Research & Hardware Grant Program
+- **Portal:** [`https://www.nvidia.com/en-us/research/applied-research-accelerator-program/`](https://www.nvidia.com/en-us/research/applied-research-accelerator-program/) & `communityrelations@nvidia.com`
+- **Requested Value:** **$30,000 – $60,000** (In-Kind GPU Compute & Edge Robotics Grant)
+- **Tax-Exempt Recipient:** **JC Coffey Foundation (`501(c)(3) EIN 33-3450194`)**
+- **Hardware Profile:**
+  - 1–2× NVIDIA RTX 6000 Ada Generation (48GB) or Dual RTX 4090 Workstation GPUs
+  - 5–8× NVIDIA Jetson AGX Orin / Jetson Orin Nano Developer Kits
+- **Mission:** Real-time drone aerial computer vision (YOLOv8/v10 via TensorRT), FLIR thermal disaster search-and-rescue, Blender OptiX synthetic damage simulation, and NVIDIA AmgX GPU-accelerated OpenFOAM fluid dynamics for water purification.
+- **Full Dossier:** See [`reports/applications/05_nvidia_hardware_grant_application.md`](file:///Users/lds1830/OpenBot/Agents/agent-c250123e-3e57-4806-ab12-4eb3acc0625f/swarmchaser/reports/applications/05_nvidia_hardware_grant_application.md).
+
+---
+
+## GRANT #8: Walmart Spark Good — Local Community Grant (Cycle 3)
+- **Portal:** [`https://www.walmart.com/nonprofits`](https://www.walmart.com/nonprofits) (Deadline: November 30)
+- **Requested Amount:** **$5,000.00**
+- **Tax-Exempt Recipient:** **JC Coffey Foundation (`501(c)(3) EIN 33-3450194`)**
+- **Focus:** Local North Carolina Supercenter / Sam's Club community grant for Mac Studio compilation node, OpenBot robotics kits, and weatherproof outdoor mesh Wi-Fi enclosures.
+- **Full Dossier:** See [`reports/applications/01_walmart_spark_good_application.md`](file:///Users/lds1830/OpenBot/Agents/agent-c250123e-3e57-4806-ab12-4eb3acc0625f/swarmchaser/reports/applications/01_walmart_spark_good_application.md).

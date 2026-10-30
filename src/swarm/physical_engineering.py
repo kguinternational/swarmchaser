@@ -23,8 +23,9 @@ and Blender assembly), anchored in The Love Effect OS (NO_INTELLIGENCE_LEFT_BEHI
    are strictly forbidden in generated documentation.
 
 5. HARDWARE BLUEPRINTS:
-   Enables Titan (OpenBot Robotics), Aqua (Water Remediation), Demeter (Gardens),
-   and Helios (Solar Microgrid) to specify and verify physical systems.
+   Enables Titan (OpenBot Robotics), Zephyr (Autonomous Drones & Aerial Relays),
+   Aqua (Water Remediation), Demeter (Gardens), and Helios (Solar Microgrid) to
+   specify and verify physical systems.
 """
 
 from __future__ import annotations
@@ -181,6 +182,40 @@ class PhysicalEngineeringSuite:
             target_value=35.0, tolerance=5.0, unit="°C"
         ))
         self.subsystems["energy"] = helios
+
+        # 5. Zephyr: Autonomous Aerial Drones & Emergency Mesh Relays
+        zephyr = PhysicalSubsystemSpec(
+            subsystem_id="zephyr-drone-v1",
+            name="Autonomous Aerial Drones & Emergency Mesh Relays",
+            lead_expert="Zephyr",
+            toolchain=["FreeCAD", "OpenFOAM", "KiCad", "Blender"],
+        )
+        zephyr.add_requirement(EngineeringRequirement(
+            req_id="UAV-01", subsystem="propulsion", parameter="thrust_to_weight_ratio",
+            target_value=2.2, tolerance=0.3, unit="ratio"
+        ))
+        zephyr.add_requirement(EngineeringRequirement(
+            req_id="UAV-02", subsystem="avionics", parameter="flight_time_minutes",
+            target_value=28.0, tolerance=4.0, unit="min"
+        ))
+        self.subsystems["drones"] = zephyr
+
+        # 6. Argus: Emergency Preparation & Multispectral/Thermal Cameras
+        argus = PhysicalSubsystemSpec(
+            subsystem_id="argus-cameras-v1",
+            name="Emergency Vision, Thermal FLIR & Multispectral Camera Array",
+            lead_expert="Argus",
+            toolchain=["OpenCV", "PyTorch", "KiCad", "Blender"],
+        )
+        argus.add_requirement(EngineeringRequirement(
+            req_id="CAM-01", subsystem="thermal_sensing", parameter="flir_thermal_resolution_hz",
+            target_value=30.0, tolerance=5.0, unit="FPS"
+        ))
+        argus.add_requirement(EngineeringRequirement(
+            req_id="CAM-02", subsystem="edge_cv", parameter="jetson_yolo_inference_ms",
+            target_value=40.0, tolerance=10.0, unit="ms"
+        ))
+        self.subsystems["cameras"] = argus
 
     def run_subsystem_verification(self, subsystem_key: str, measurements: Dict[str, float]) -> Dict[str, Any]:
         sub = self.subsystems.get(subsystem_key)

@@ -39,3 +39,19 @@ def test_subsystem_verification_suite():
     })
     assert res_water["passed"] == 2
     assert res_water["failed_honestly_in_red"] == 0
+
+    # Test Zephyr drones
+    res_drones = suite.run_subsystem_verification("drones", {
+        "UAV-01": 2.3,   # PASS (2.2 +- 0.3)
+        "UAV-02": 26.0,  # PASS (28.0 +- 4.0)
+    })
+    assert res_drones["passed"] == 2
+    assert res_drones["failed_honestly_in_red"] == 0
+
+    # Test Argus emergency cameras
+    res_cameras = suite.run_subsystem_verification("cameras", {
+        "CAM-01": 30.0,  # PASS (30.0 +- 5.0)
+        "CAM-02": 42.0,  # PASS (40.0 +- 10.0)
+    })
+    assert res_cameras["passed"] == 2
+    assert res_cameras["failed_honestly_in_red"] == 0
