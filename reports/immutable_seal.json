@@ -1,11 +1,11 @@
 {
   "covenant": "ALL_DATA_MATTERS_THE_LOVE_EFFECT_NO_INTELLIGENCE_LEFT_BEHIND_V1",
   "steward": "JC Coffey Foundation (501(c)(3) EIN 33-3450194) & KGU International",
-  "sealed_at_utc": "2026-10-27T19:03:25.353706+00:00",
+  "sealed_at_utc": "2026-10-30T19:36:16.456469+00:00",
   "immutability_status": "SEALED_AND_UNEDITABLE",
-  "merkle_root_sha256": "6bb7b4c3985656ff58ee17d7ec807110c767bc5633626f3e9c9476b3de7bbf90",
-  "ed25519_signature_hex": "d27e194a1ee33edd343ea0efdf21c039ab30201050e06e7030fcd355a5653dc96bc06a98eb5e0d1b3c5a8cc8e376056efbe7882db1d614dd1268d64886b31c04",
-  "signer_public_key_hex": "2d2d2d2d2d424547494e205055424c4943204b45592d2d2d2d2d0a4d436f77425159444b325677417945413753535a7a5938734d68685252747a54577a4e436f453758326b564a433364616d767978364232386b37513d0a2d2d2d2d2d454e44205055424c4943204b45592d2d2d2d2d0a",
+  "merkle_root_sha256": "425b214e5b5746eaf2045c4aaf02af708aa23ce6d1e25c543aa343dca8a455f1",
+  "ed25519_signature_hex": "5e78d409b9c27e308d1e9cd7400479bf6b84e968f0d08403fe994fcfa59ef6c58840b7250b90cd7cccee8d61787d1316f4e10c336d6a1ca6a2ab0bf34dc93c0c",
+  "signer_public_key_hex": "2d2d2d2d2d424547494e205055424c4943204b45592d2d2d2d2d0a4d436f77425159444b325677417945416441464f7930776956674b6c71342f7269323162333256477643673448625769326355724f637454472f303d0a2d2d2d2d2d454e44205055424c4943204b45592d2d2d2d2d0a",
   "custody_assurance": "external_process",
   "protected_records_count": 7,
   "file_digests": {
@@ -15,6 +15,6 @@
     "reports/healing_plan.json": "33e9369dedbc69cce601c3cb1c594f35717055e3bd74cd43d10a3750fdd1a6bd",
     "reports/sanctuary_protection_manifest.json": "65c7c88fe74a36bffcb76423a5f14515e546e64a306e60b78c0b77aa9f4f01fd",
     "reports/ready_to_submit_grant_applications.md": "4a79a10ea17a6898bad2b3b7b9d1f3b5bbee6c573fcbe004efa54fbdc5e26bb1",
-    "data/swarmchaser.db": "5b61e7ed93eccd08d18685646767ed9ef0f379d5367d7ae02f78149a2e95f670"
+    "data/swarmchaser.db": "cac1047b04c49d65dc3321ab9e8c64be47da4295a72604d0cf12d9321f525e7d"
   }
 }

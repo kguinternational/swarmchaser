@@ -1,0 +1,41 @@
+from src.swarm.physical_engineering import (
+    EngineeringRequirement,
+    PhysicalEngineeringSuite,
+    VerificationStatus,
+)
+
+
+def test_engineering_honest_failure_reporting():
+    """Verify that when a strength test fails, it reports FAIL in red rather than being faked."""
+    req = EngineeringRequirement(
+        req_id="TEST-01",
+        subsystem="chassis",
+        parameter="yield_strength",
+        target_value=50.0,
+        tolerance=5.0,
+        unit="MPa",
+    )
+    # Measured is 30 MPa (severely below limit [45, 55])
+    status = req.evaluate(30.0)
+    assert status == VerificationStatus.FAIL
+    assert "FAIL IN RED" in req.notes
+    assert req.measured_value == 30.0
+
+
+def test_subsystem_verification_suite():
+    suite = PhysicalEngineeringSuite()
+    # Test Titan robotics
+    res_robotics = suite.run_subsystem_verification("robotics", {
+        "ROB-01": 46.0,  # PASS (target 45 +- 5)
+        "ROB-02": 18.0,  # FAIL (target 12 +- 2) -> inrush exceeded
+    })
+    assert res_robotics["passed"] == 1
+    assert res_robotics["failed_honestly_in_red"] == 1
+
+    # Test Aqua water remediation
+    res_water = suite.run_subsystem_verification("water", {
+        "WAT-01": 15.2,  # PASS
+        "WAT-02": 0.4,   # PASS
+    })
+    assert res_water["passed"] == 2
+    assert res_water["failed_honestly_in_red"] == 0
