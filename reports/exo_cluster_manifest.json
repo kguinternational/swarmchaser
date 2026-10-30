@@ -1,0 +1,117 @@
+{
+  "covenant": "ALL_DATA_MATTERS_THE_LOVE_EFFECT_NO_INTELLIGENCE_LEFT_BEHIND_V1",
+  "steward": "JC Coffey Foundation (501(c)(3) EIN 33-3450194) & KGU International",
+  "synchronized_at_utc": "2026-10-30T19:45:58.073889+00:00",
+  "coo": "Atlas",
+  "total_cluster_computers": 5,
+  "cluster_gateway": "http://127.0.0.1:52415",
+  "active_local_node": "12D3KooWDHJjofyJ914YKgKyEzu7tczw4HuARwANADav7TvHwE8s",
+  "network_computers": [
+    {
+      "node_id": "12D3KooWDHJjofyJ914YKgKyEzu7tczw4HuARwANADav7TvHwE8s",
+      "friendly_name": "MacBook Pro (2)",
+      "hardware": "MacBook Pro (Apple M5)",
+      "os_version": "27.2 (build 26B123)",
+      "total_ram_gb": 24.0,
+      "available_ram_gb": 7.8,
+      "available_disk_gb": 86.2,
+      "status": "ONLINE_ACTIVE"
+    },
+    {
+      "node_id": "12D3KooWPvUtJTfS4bDuzwivNtSobrz7HihHzoEttkeNPAKpkUmD",
+      "friendly_name": "JC\u2019s MacBook Pro",
+      "hardware": "MacBook Pro (Apple M3 Max)",
+      "os_version": "27.2 (build 26B123)",
+      "total_ram_gb": 0.0,
+      "available_ram_gb": 0.0,
+      "available_disk_gb": 0.0,
+      "status": "CLUSTER_MEMBER_CONNECTED"
+    },
+    {
+      "node_id": "12D3KooWFNnhnohJTPjA7XXPSZaA4ZJmgicsabDBstrAMRC2GWiK",
+      "friendly_name": "JC\u2019s MacBook Pro",
+      "hardware": "MacBook Pro (Apple M3 Max)",
+      "os_version": "27.2 (build 26B123)",
+      "total_ram_gb": 0.0,
+      "available_ram_gb": 0.0,
+      "available_disk_gb": 0.0,
+      "status": "CLUSTER_MEMBER_CONNECTED"
+    },
+    {
+      "node_id": "12D3KooWP1PZsUky7GJFmj8JVDYwxG5cGwu4Fd9CkgNScS8acnhL",
+      "friendly_name": "Real\u2019s MacBook Pro (202)",
+      "hardware": "MacBook Pro (Apple M4)",
+      "os_version": "27.2 (build 26B118)",
+      "total_ram_gb": 0.0,
+      "available_ram_gb": 0.0,
+      "available_disk_gb": 0.0,
+      "status": "CLUSTER_MEMBER_CONNECTED"
+    },
+    {
+      "node_id": "12D3KooWKU31yx9guBoFxZWtaCxKi49fb3DFWtG6mA2VEgFEhTez",
+      "friendly_name": "Real\u2019s MacBook Pro (202)",
+      "hardware": "MacBook Pro (Apple M4)",
+      "os_version": "27.2 (build 26B123)",
+      "total_ram_gb": 0.0,
+      "available_ram_gb": 0.0,
+      "available_disk_gb": 0.0,
+      "status": "CLUSTER_MEMBER_CONNECTED"
+    }
+  ],
+  "merkle_seal_sha256": "425b214e5b5746eaf2045c4aaf02af708aa23ce6d1e25c543aa343dca8a455f1",
+  "ed25519_signature_hex": "5e78d409b9c27e308d1e9cd7400479bf6b84e968f0d08403fe994fcfa59ef6c58840b7250b90cd7cccee8d61787d1316f4e10c336d6a1ca6a2ab0bf34dc93c0c",
+  "physical_engineering_subsystems": {
+    "robotics": {
+      "subsystem": "OpenBot Autonomous Agricultural Rover Chassis",
+      "lead": "Titan",
+      "toolchain": [
+        "FreeCAD",
+        "KiCad",
+        "LTSpice",
+        "Blender"
+      ],
+      "total_requirements": 2,
+      "passed": 0,
+      "failed_honestly_in_red": 0,
+      "pending_change_requests": 0
+    },
+    "water": {
+      "subsystem": "Multi-Stage Biochar & Heavy Metal Water Remediation Reactor",
+      "lead": "Aqua",
+      "toolchain": [
+        "FreeCAD",
+        "OpenFOAM",
+        "KiCad"
+      ],
+      "total_requirements": 2,
+      "passed": 0,
+      "failed_honestly_in_red": 0,
+      "pending_change_requests": 0
+    },
+    "gardens": {
+      "subsystem": "Regenerative Permaculture Automated Micro-Drip System",
+      "lead": "Demeter",
+      "toolchain": [
+        "FreeCAD",
+        "KiCad",
+        "Blender"
+      ],
+      "total_requirements": 1,
+      "passed": 0,
+      "failed_honestly_in_red": 0,
+      "pending_change_requests": 0
+    },
+    "energy": {
+      "subsystem": "48V LiFePO4 Solar Microgrid & Pump Battery Bank",
+      "lead": "Helios",
+      "toolchain": [
+        "KiCad",
+        "LTSpice"
+      ],
+      "total_requirements": 1,
+      "passed": 0,
+      "failed_honestly_in_red": 0,
+      "pending_change_requests": 0
+    }
+  }
+}
