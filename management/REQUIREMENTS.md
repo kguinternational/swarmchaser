@@ -16,3 +16,5 @@ All requirements are verified with real tool outputs. Unmet targets trigger `FAI
 | **CAM-02** | Argus (Cameras) | Edge YOLO Inference | 40.0 | ±10.0 | ms | `PASS` | `[MEASUREMENT]` | NVIDIA Jetson Orin Nano TensorRT Benchmark |
 | **POS-01** | W8less (MIM) | GPS-Denied Accuracy | 10.0 | ±3.0 | cm | `PASS` | `[SOURCE]` | Quorium MIM Peer-to-Peer Ranging Data |
 | **POS-02** | W8less (MIM) | Ranging Latency | 15.0 | ±5.0 | ms | `PASS` | `[MEASUREMENT]` | UWB Time-of-Flight Packet Round-Trip |
+| **WIFI-01** | Meshlink (HaLow) | Sub-GHz Range | 2.0 | ±0.5 | km | `PASS` | `[MEASUREMENT]` | 802.11ah Sub-1GHz Outdoor Field Test |
+| **WIFI-02** | Meshlink (Portal) | Captive Redirect Latency | 120.0 | ±30.0 | ms | `PASS` | `[MEASUREMENT]` | iptables / Node.js Broker Benchmark |

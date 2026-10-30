@@ -63,3 +63,11 @@ def test_subsystem_verification_suite():
     })
     assert res_pos["passed"] == 2
     assert res_pos["failed_honestly_in_red"] == 0
+
+    # Test Meshlink Wi-Fi HaLow & self-funding gateway
+    res_meshlink = suite.run_subsystem_verification("meshlink", {
+        "WIFI-01": 2.1,   # PASS (2.0 +- 0.5 km)
+        "WIFI-02": 115.0, # PASS (120.0 +- 30.0 ms)
+    })
+    assert res_meshlink["passed"] == 2
+    assert res_meshlink["failed_honestly_in_red"] == 0

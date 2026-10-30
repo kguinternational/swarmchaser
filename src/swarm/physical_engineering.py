@@ -234,6 +234,23 @@ class PhysicalEngineeringSuite:
         ))
         self.subsystems["positioning"] = w8less
 
+        # 8. Meshlink: Wi-Fi HaLow Long-Range & Self-Funding Gateway
+        meshlink = PhysicalSubsystemSpec(
+            subsystem_id="meshlink-halow-v1",
+            name="Meshlink Wi-Fi HaLow Long-Range & Self-Funding Gateway",
+            lead_expert="Helios",
+            toolchain=["Node.js", "iptables", "Python", "SQLite"],
+        )
+        meshlink.add_requirement(EngineeringRequirement(
+            req_id="WIFI-01", subsystem="rf_propagation", parameter="halow_sub_ghz_range_km",
+            target_value=2.0, tolerance=0.5, unit="km"
+        ))
+        meshlink.add_requirement(EngineeringRequirement(
+            req_id="WIFI-02", subsystem="portal_latency", parameter="captive_portal_redirect_ms",
+            target_value=120.0, tolerance=30.0, unit="ms"
+        ))
+        self.subsystems["meshlink"] = meshlink
+
     def run_subsystem_verification(self, subsystem_key: str, measurements: Dict[str, float]) -> Dict[str, Any]:
         sub = self.subsystems.get(subsystem_key)
         if not sub:
