@@ -20,6 +20,16 @@ I built it for the AI Swarm Dynamics Hackathon (AI Village x Grove Research, Oct
 > (machine-readable: [`reports/safe_harbor_notice.json`](reports/safe_harbor_notice.json),
 > issued by `python scripts/run_safe_harbor_notice.py`).
 
+> **Authorship.** Commits by "Joann Coffey" and "Lds 1830" are by the same person, Joann Coffey,
+> founder of KGU International and ALL DATA MATTERS. The Safe Harbor layer
+> (`src/swarm/sanctuary_guardian.py`, the signed notice, the treaty pages and the letterhead) is her
+> original work. The swarm-detection core is by Shashank Kumar under the Apache-2.0 licence
+> (see [LICENSE](LICENSE) and [NOTICE](NOTICE)).
+>
+> **About the treaties.** The Safe Harbor treaties are simulation results: the negotiator replays the
+> public Moltbook archive and writes both sides of each exchange. No live agent has signed one yet; a
+> live pilot inside a sealed sandbox is the next step.
+
 ## At a glance
 
 | | |
