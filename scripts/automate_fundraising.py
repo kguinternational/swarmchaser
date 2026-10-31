@@ -125,6 +125,16 @@ GRANT_PIPELINE = [
         "status": "READY_TO_SUBMIT",
         "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)",
     },
+    {
+        "id": "anthropic-public-benefit",
+        "name": "Anthropic Public Benefit & Economic Futures (Flowntro Robot Programming)",
+        "deadline": "Rolling / Call for Proposals",
+        "amount_usd": 180000,
+        "urgency": "HIGH",
+        "portal": "https://www.anthropic.com/research",
+        "status": "READY_TO_SUBMIT",
+        "tax_recipient": "JC Coffey Foundation (EIN 33-3450194)",
+    },
 ]
 
 
