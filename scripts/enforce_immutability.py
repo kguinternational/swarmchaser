@@ -40,6 +40,7 @@ IMMUTABLE_TABLES = [
     "healing_prescriptions",
     "healing_summaries",
     "company_employees",
+    "dialogue_commons",
 ]
 
 
